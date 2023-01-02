@@ -7,7 +7,7 @@ A design & build of a replica control panel for a BAE 146 aircraft, for use with
 
 ## Acknowledgements
 
-I owe a lot of thanks to the time and effort `Heli Mech` has put into his videos as part of the [737diysim project](https://www.737diysim.com/). **I recommend anyone interested in building this control panel to first watch his [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**. I learnt a lot from his builds, and used a number of similar approaches & techniques on this design of my own.
+I owe a lot of thanks to the time and effort `Heli Mech` has put into his videos as part of the [737diysim project](https://www.737diysim.com/). **I recommend anyone interested in building this control panel to first watch his [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**. I learnt a lot from his builds, and applied some similar approaches & techniques on this design of my own.
 
 
 
