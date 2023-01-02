@@ -2,10 +2,11 @@
 
 ![box_2023-Jan-02_02-31-33AM-000_CustomizedView2868195922](https://user-images.githubusercontent.com/131580/210193589-2818c8e0-bbcb-4c62-88e0-2b58e8e6ed8f.jpg)
 
+My design & build of a replica control panel for a BAE 146 aircraft, for use with flight simulators (e.g. MSFS 2020).
 
+This is my first major hardware project. It required learning a lot of new skills, including: modelling in fusion 360, 3D printing, rapid prototyping, learning reliable souldering & wiring skills, and programming flight simulators via mobiflight.
 
-[Boeing 737 AutoPilot Panel (MCP) for MSFS2020, Prosim & PMDG](https://www.youtube.com/watch?v=o9EGCjD7V-M)
-https://www.737diysim.com/
+ I owe a lot of thanks to the time and effort `Heli Mech` has put into his You Tube videos as part of the [737diysim project](https://www.737diysim.com/). Specifically **I recommend anyone interested in building this control panel to first watch the [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**. There are many aspects of that build which I've applied to my own model.
 
 
 ## Construction
@@ -13,11 +14,11 @@ The overall design screws together quite simply.
 
 Each panel consists of a top & bottom part. The top part includes the text, and screws into the lower part. The lower part conceals any extra fixtures needed to mount compenents, and then screws into the support frame.
 
-The two part design also helps make the two tone look. I printed the front top panels & boxes in dark grey, and the bottom panels in light grey.
+The two part design also helps make the two-tone look. I printed the top panels & boxes in dark grey, and the bottom panels in light grey.
 
 ![2023-01-01 20_47_19-Autodesk Fusion 360 (Personal - Not for Commercial Use)](https://user-images.githubusercontent.com/131580/210195905-39420ff4-44f5-4ab4-ac07-d8619e67c3cf.png)
 
-Each panel is standalone, so can be built indepdendetly from each other. This helps expand the unit over time. The first panel I built was the autopilot panel. Despite the finished panel having a lot of wiring, there is only one type of components to install (the KD22 buttons) which clip into place easily.
+Each panel is standalone, so can be built indepdendetly from each other. This helps expand the unit over time. The first panel I built was the autopilot. Despite it having a lot of wiring once complete, there is only one type of components to install (the KD2-22 switches) which clip into place easily. Once you've wired one it's just a case of repeating the pattern.
 
 <img src="https://user-images.githubusercontent.com/131580/210202964-14ba0a3f-5f6b-4b8c-a14b-633ff269510b.jpg" width=600px align="left"><img src="https://user-images.githubusercontent.com/131580/210202983-4d1bb7b5-dd35-442d-9e9b-5ec85d93d15a.jpg" width=600px>
 
@@ -58,42 +59,31 @@ Each panel is standalone, so can be built indepdendetly from each other. This he
 
 
 
+### Other parts
 
-
-Screws
- - the build uses entirely M3 screws (except for M4s to mount the Arduino Mega).
- - M3 4mm countersunk attach the top panels to the bottom panels.
- - M3 6mm rounded-head attach the bottom panel to the support frames.
- - M3 4mm standoff screws mount the LCD & LED displays
-
-Paint pen
-
-
-
-wires	
-heat shrink	
-arduino mega	
-
-protoboboard	https://www.amazon.com/gp/product/B07DRG2LN2/ KEYESTUDIO 10PCS Proto Shield for Arduino Mega, Double Sided PCB Prototype Shield Solderable for Arduino Mega R3 2560 
-
-heat inserts	https://www.amazon.com/dp/B093357W32/ref=dp_iou_view_item?ie=UTF8&psc=1
-	
-led button cover	https://a360.co/3cJWwxx
+- Screws: I started off with a mixed box like this: https://www.amazon.com/gp/product/B076ZDXK1W
+  - the build uses entirely M3 screws (except for M4s to mount the Arduino Mega).
+  - M3 4mm countersunk attach the top panels to the bottom panels.
+  - M3 6mm rounded-head attach the bottom panel to the support frames.
+  - M3 4mm standoff screws mount the LCD & LED displays
+ - Paint pen - the raised lettering is printed in the same grey as the rest of the top plate, then delicatly gone over with a white paint pen. You'll want to practise this a little at first, it's easy to flood the lettering with too much paint.
+ - Arduino Mega - in order to maintain high levels of compatability mobiflight only supports a limited set of arduino models.
+- Wires - nice flexable wires that are easy to route in bundles.	
+ - Heat shrink - all soulder joints are also heat shrinked for avoid shorts later
+ - protoboboard	https://www.amazon.com/gp/product/B07DRG2LN2/ KEYESTUDIO Proto Shield for Arduino Mega
+ - heat set threaded nuts	https://www.amazon.com/dp/B093357W32/ref=dp_iou_view_item?ie=UTF8&psc=1
+ - led button cover, taken from 737diysim project https://a360.co/3cJWwxx
 
 
 
 ## Wiring
 
-A common ground wire is connected to every component.
+Everything is wired to a protoboard that sits on top of the Arduino. This means the Arduino can be swapped out easily, without having to remove any wires.
 
-Protoboard
+A single common ground wire is connected to every component.
 
+The curent design consumes almost every pin on an Arduino Mega. This is my arduino [wiring schematic](https://github.com/hcooper/bae-146-control-panel/files/10330010/bae146.build.-.Wiring.Schematic.pdf). Adding an extra Arduino in future should only require a little internal redesign. MobiFlight is able to control multiple arduinos simulatiously.
 
-The curent design consumes almost every pin on an Arduino Mega. This is my arduino [wiring schematic](https://github.com/hcooper/bae-146-control-panel/files/10330010/bae146.build.-.Wiring.Schematic.pdf).
-
-
-
-Adding an extra Arduino in future should only require a little internal redesign. MobiFlight is able to control multiple arduinos simulatiously.
 
 
 
@@ -101,11 +91,16 @@ Adding an extra Arduino in future should only require a little internal redesign
 
 Mobiflight takes care of all the configuration and communication with the flightsim.
 
+TODO: upload mobiflight configs that do clever NAV/COM stuff.
+
+
 
 ## Gallery
 
+![PXL_20220816_222251135 MP](https://user-images.githubusercontent.com/131580/210194150-04224985-87d7-4500-a0fc-10ae9fdd6f5d.jpg)
+
+
 ![box_2023-Jan-02_01-32-42AM-000_CustomizedView28672771227](https://user-images.githubusercontent.com/131580/210193592-95bdb8e3-41bc-42f8-bf86-e8c1163fb571.jpg)
 
-![PXL_20220816_222251135 MP](https://user-images.githubusercontent.com/131580/210194150-04224985-87d7-4500-a0fc-10ae9fdd6f5d.jpg)
 
 ![box_2023-Jan-02_03-36-28AM-000_CustomizedView22849700086](https://user-images.githubusercontent.com/131580/210194112-c9b5376b-5c2c-44ac-94b8-7276cb43d5f8.jpg)
