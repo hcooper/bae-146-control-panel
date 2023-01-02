@@ -104,3 +104,9 @@ TODO: upload mobiflight configs that do clever NAV/COM stuff.
 
 
 ![box_2023-Jan-02_03-36-28AM-000_CustomizedView22849700086](https://user-images.githubusercontent.com/131580/210194112-c9b5376b-5c2c-44ac-94b8-7276cb43d5f8.jpg)
+
+
+![PXL_20220827_182759110](https://user-images.githubusercontent.com/131580/210205905-c3ff3184-065e-41d1-8084-e1aaf84e89fc.jpg)
+
+
+More photos: https://photos.app.goo.gl/MFjjrHNgJydS1jSQ8
