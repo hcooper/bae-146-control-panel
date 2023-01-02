@@ -19,8 +19,7 @@ The two part design also helps make the two tone look. I printed the front top p
 
 Each panel is standalone, so can be built indepdendetly from each other. This helps expand the unit over time. The first panel I built was the autopilot panel. Despite the finished panel having a lot of wiring, there is only one type of components to install (the KD22 buttons) which clip into place easily.
 
-
-
+<img src="https://user-images.githubusercontent.com/131580/210202964-14ba0a3f-5f6b-4b8c-a14b-633ff269510b.jpg" width=600px align="left"><img src="https://user-images.githubusercontent.com/131580/210202983-4d1bb7b5-dd35-442d-9e9b-5ec85d93d15a.jpg" width=600px>
 
 ## Parts
 ### Radio Panel & Alarms
