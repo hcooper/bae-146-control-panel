@@ -3,6 +3,10 @@
 ![box_2023-Jan-02_02-31-33AM-000_CustomizedView2868195922](https://user-images.githubusercontent.com/131580/210193589-2818c8e0-bbcb-4c62-88e0-2b58e8e6ed8f.jpg)
 
 
+Each panel consists of a top & bottom part.
+
+
+
 ## Parts
 ### Radio Panel & Alarms
 
@@ -38,8 +42,21 @@
 |Altitude selector|rotary encoder|1x|
 
 
+Screws	
+Paint pen	
+wires	
+heat shrink	
+arduino mega	
+protoboboard	
+heat inserts	https://www.amazon.com/dp/B093357W32/ref=dp_iou_view_item?ie=UTF8&psc=1
+	
+led button cover	https://a360.co/3cJWwxx
+
+
+
 ## Wiring
 
+[bae146 build - Wiring Schematic.pdf](https://github.com/hcooper/bae-146-control-panel/files/10330010/bae146.build.-.Wiring.Schematic.pdf)
 
 
 ## Gallery
