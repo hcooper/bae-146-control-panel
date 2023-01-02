@@ -1,4 +1,4 @@
-# bae-146-control-panel
+# BAE 146 Control Panel
 
 ![box_2023-Jan-02_02-31-33AM-000_CustomizedView2868195922](https://user-images.githubusercontent.com/131580/210193589-2818c8e0-bbcb-4c62-88e0-2b58e8e6ed8f.jpg)
 
