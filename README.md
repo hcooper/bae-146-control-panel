@@ -4,13 +4,16 @@
 
 A design & build of a replica control panel for a BAE 146 aircraft, for use with flight simulators (e.g. MSFS 2020).
 
-This project required learning a lot of new skills, including: modelling in fusion 360, 3D printing, rapid prototyping, reliable soldering & wiring skills, and programming flight simulators.
 
-I owe a lot of thanks to the time and effort `Heli Mech` has put into his videos as part of the [737diysim project](https://www.737diysim.com/). Specifically **I recommend anyone interested in building this control panel to first watch the [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**. There are many aspects of that build which I've applied to this model, and so might not reexplain fully here.
+## Acknowledgements
+
+I owe a lot of thanks to the time and effort `Heli Mech` has put into his videos as part of the [737diysim project](https://www.737diysim.com/). **I recommend anyone interested in building this control panel to first watch his [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**. I learnt a lot from his builds, and used a number of similar approaches & techniques on this design of my own.
+
+
 
 
 ## Model Files
-- [Full Fusion 360 model](https://github.com/hcooper/bae-146-control-panel/releases)
+- [Complete Fusion 360 model](https://github.com/hcooper/bae-146-control-panel/releases)
 - [STL files for 3D printing](https://www.printables.com/model/354370)
 
 
