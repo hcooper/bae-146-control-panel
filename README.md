@@ -3,11 +3,23 @@
 ![box_2023-Jan-02_02-31-33AM-000_CustomizedView2868195922](https://user-images.githubusercontent.com/131580/210193589-2818c8e0-bbcb-4c62-88e0-2b58e8e6ed8f.jpg)
 
 
-## Construction
 
-Each panel consists of a top & bottom part. The top part includes the text, and screws into the lower part. The lower part conseals any extra fixtures needs to mount compenents, and screws into the support frame.
+[Boeing 737 AutoPilot Panel (MCP) for MSFS2020, Prosim & PMDG](https://www.youtube.com/watch?v=o9EGCjD7V-M)
+https://www.737diysim.com/
+
+
+## Construction
+The overall design screws together quite simply.
+
+Each panel consists of a top & bottom part. The top part includes the text, and screws into the lower part. The lower part conceals any extra fixtures needed to mount compenents, and then screws into the support frame.
+
+The two part design also helps make the two tone look. I printed the front top panels & boxes in dark grey, and the bottom panels in light grey.
 
 ![2023-01-01 20_47_19-Autodesk Fusion 360 (Personal - Not for Commercial Use)](https://user-images.githubusercontent.com/131580/210195905-39420ff4-44f5-4ab4-ac07-d8619e67c3cf.png)
+
+Each panel is standalone, so can be built indepdendetly from each other. This helps expand the unit over time. The first panel I built was the autopilot panel. Despite the finished panel having a lot of wiring, there is only one type of components to install (the KD22 buttons) which clip into place easily.
+
+
 
 
 ## Parts
@@ -51,14 +63,9 @@ Each panel consists of a top & bottom part. The top part includes the text, and 
 
 Screws
  - the build uses entirely M3 screws (except for M4s to mount the Arduino Mega).
- - Countersunk-head M3 4mm - attach the top and bottom panels
- - Rounded-head 6mm - attach the bottom panel to the support frames
- - M3 4mm standoff screws - mount the LCD & LED displays
-
-
-
-
-
+ - M3 4mm countersunk attach the top panels to the bottom panels.
+ - M3 6mm rounded-head attach the bottom panel to the support frames.
+ - M3 4mm standoff screws mount the LCD & LED displays
 
 Paint pen
 
@@ -67,7 +74,9 @@ Paint pen
 wires	
 heat shrink	
 arduino mega	
-protoboboard	
+
+protoboboard	https://www.amazon.com/gp/product/B07DRG2LN2/ KEYESTUDIO 10PCS Proto Shield for Arduino Mega, Double Sided PCB Prototype Shield Solderable for Arduino Mega R3 2560 
+
 heat inserts	https://www.amazon.com/dp/B093357W32/ref=dp_iou_view_item?ie=UTF8&psc=1
 	
 led button cover	https://a360.co/3cJWwxx
@@ -76,7 +85,22 @@ led button cover	https://a360.co/3cJWwxx
 
 ## Wiring
 
-[bae146 build - Wiring Schematic.pdf](https://github.com/hcooper/bae-146-control-panel/files/10330010/bae146.build.-.Wiring.Schematic.pdf)
+A common ground wire is connected to every component.
+
+Protoboard
+
+
+The curent design consumes almost every pin on an Arduino Mega. This is my arduino [wiring schematic](https://github.com/hcooper/bae-146-control-panel/files/10330010/bae146.build.-.Wiring.Schematic.pdf).
+
+
+
+Adding an extra Arduino in future should only require a little internal redesign. MobiFlight is able to control multiple arduinos simulatiously.
+
+
+
+## Software
+
+Mobiflight takes care of all the configuration and communication with the flightsim.
 
 
 ## Gallery
