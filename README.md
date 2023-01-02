@@ -1,15 +1,23 @@
 # BAE 146 Control Panel
 
-![box_2023-Jan-02_02-31-33AM-000_CustomizedView2868195922](https://user-images.githubusercontent.com/131580/210193589-2818c8e0-bbcb-4c62-88e0-2b58e8e6ed8f.jpg)
+![box_2023-Jan-02_02-31-33AM-000_CustomizedView2868195922](https://user-images.githubusercontent.com/131580/210193589-2818c8e0-bbcb-4c62-88e0-2b58e8e6ed8f.jpg "sdfsdf")
 
-A design & build of a replica control panel for a BAE 146 aircraft, for use with flight simulators (e.g. MSFS 2020).
+<div>
+<img align="left" height="300" src="https://user-images.githubusercontent.com/131580/210278496-e006068e-5f52-4857-985a-7209a87908e3.jpg">
+<img  height="300" src="https://user-images.githubusercontent.com/131580/210279092-1216bde6-b251-4d16-a269-87e02b4a7aff.jpg">
+</div>
+
+*<small>[photo credit](https://aviationweek.com/defense-space/aircraft-propulsion/uk-royal-air-force-begins-bae-146-fleet-retirement), [photo credit](https://www.airliners.net/photo/Star-Peru/British-Aerospace-BAe-146-200A/2079009/L)</small>*
+
+
+This documents the design & build of a replica control panel for a BAE 146 aircraft, intended for use with flight simulators such as MSFS 2020.
 
 
 ## Acknowledgements
 
-I owe a lot of thanks to the time and effort `Heli Mech` has put into his videos as part of the [737diysim project](https://www.737diysim.com/). **I recommend anyone interested in building this control panel to first watch his [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**. I learnt a lot from his builds, and applied some similar approaches & techniques on this design of my own.
+I owe a lot of thanks to `Heli Mech` for the time and effort put into his videos as part of the [737diysim project](https://www.737diysim.com/). I learnt a lot from his builds, and applied some similar approaches & techniques on this design of my own.
 
-
+**I recommend anyone interested in building this control panel to first watch his [Boeing 737 AutoPilot Panel (MCP)](https://www.youtube.com/watch?v=o9EGCjD7V-M) video**.
 
 
 ## Model Files
@@ -28,7 +36,17 @@ The two part design also helps make the two-tone look. I printed the top panels 
 
 Each panel is standalone, so can be built independently from each other. This helps expand the unit over time. The first panel I built was the autopilot. Despite it having a lot of wiring once complete, there is only one type of components to install (the KD2-22 switches) which clip into place easily. Once you've wired one it's just a case of repeating the pattern.
 
-<img src="https://user-images.githubusercontent.com/131580/210202964-14ba0a3f-5f6b-4b8c-a14b-633ff269510b.jpg" width=600px align="left"><img src="https://user-images.githubusercontent.com/131580/210202983-4d1bb7b5-dd35-442d-9e9b-5ec85d93d15a.jpg" width=600px>
+<div>
+<img align="left" src="https://user-images.githubusercontent.com/131580/210202964-14ba0a3f-5f6b-4b8c-a14b-633ff269510b.jpg" height="300">
+<img src="https://user-images.githubusercontent.com/131580/210202983-4d1bb7b5-dd35-442d-9e9b-5ec85d93d15a.jpg" height="300">
+</div>
+
+
+
+https://user-images.githubusercontent.com/131580/210282955-403bcbc8-085f-4768-9863-33c305696a0f.mp4
+
+
+
 
 ## Parts
 ### Radio Panel & Alarms
