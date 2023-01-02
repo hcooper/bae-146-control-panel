@@ -21,19 +21,21 @@
 ### Autopilot Panel
 ||||
 |-|-|-|
-|Buttons with LED|[10Pcs Non Locking Push Button Switch 19x19mm KD2-22 8 Pins with Light Inside Illuminated 3A 250V Without Lock Black](https://www.amazon.com/gp/product/B07CXN14QV/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)|x12|
+|Buttons with LED|[KD2-22 10Pcs Non Locking Push Button Switch 19x19mm KD2-22 8 Pins with Light Inside Illuminated 3A 250V Without Lock Black](https://www.amazon.com/gp/product/B07CXN14QV/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)|x12|
 
 ### Heading Panel
 ||||
 |-|-|-|
 |7 Segment LED|[7 Segment LED](https://www.propwashsim.com/store/7segled)|x2 3 digits white|
 |NAV selector|[Taiss 3pcs Rotary Switch RS26 1P12T](https://www.amazon.com/dp/B074WMC9C8?ref_=pe_386300_442746000_DDT_E_DDE_dt_1&th=1)|1x, same as radio panel|
-Course & Heading Selectors
+|Course & Heading Selectors|rotary encoder|3x|
 
 ### Altitude Panel
-Button with LED
-7 Segment LED
-Altitude selector
+||||
+|-|-|-|
+|Button with LED|[KD2-22 10Pcs Non Locking Push Button Switch 19x19mm KD2-22 8 Pins with Light Inside Illuminated 3A 250V Without Lock Black](https://www.amazon.com/gp/product/B07CXN14QV/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)|x1|
+|7 Segment LED|[7 Segment LED](https://www.propwashsim.com/store/7segled)|x1 5 digits white|
+|Altitude selector|rotary encoder|1x|
 
 
 ## Wiring
