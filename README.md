@@ -26,6 +26,13 @@ I owe a lot of thanks to `Heli Mech` for the time and effort put into his videos
 
 
 ## Construction
+
+
+
+https://user-images.githubusercontent.com/131580/210649361-06f141dc-33c4-4cf1-97de-4275b763dede.mp4
+
+
+
 The overall design screws together quite simply.
 
 Each panel consists of a top & bottom part. The top part includes the text, and screws into the lower part. The lower part conceals any extra fixtures needed to mount components, and then screws into the support frame.
@@ -40,13 +47,6 @@ Each panel is standalone, so can be built independently from each other. This he
 <img align="left" src="https://user-images.githubusercontent.com/131580/210202964-14ba0a3f-5f6b-4b8c-a14b-633ff269510b.jpg" height="300">
 <img src="https://user-images.githubusercontent.com/131580/210202983-4d1bb7b5-dd35-442d-9e9b-5ec85d93d15a.jpg" height="300">
 </div>
-
-
-
-https://user-images.githubusercontent.com/131580/210282955-403bcbc8-085f-4768-9863-33c305696a0f.mp4
-
-
-
 
 ## Parts
 ### Radio Panel & Alarms
@@ -101,7 +101,6 @@ https://user-images.githubusercontent.com/131580/210282955-403bcbc8-085f-4768-98
  - led button cover, taken from 737diysim project https://a360.co/3cJWwxx
 
 
-
 ## Wiring
 
 Everything is wired to a protoboard that sits on top of the Arduino. This means the Arduino can be swapped out easily, without having to remove any wires.
@@ -111,14 +110,11 @@ A single common ground wire is connected to every component.
 The current design consumes almost every pin on an Arduino Mega. This is my arduino [wiring schematic](https://github.com/hcooper/bae-146-control-panel/files/10330010/bae146.build.-.Wiring.Schematic.pdf). Adding an extra Arduino in future should only require a little internal redesign. MobiFlight is able to control multiple Arduinos simultaneously.
 
 
-
-
 ## Software
 
 Mobiflight takes care of all the configuration and communication with the flightsim.
 
 TODO: upload mobiflight configs that do clever NAV/COM stuff.
-
 
 
 ## Gallery
