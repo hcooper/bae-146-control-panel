@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleName>Controls</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <Output Name="AP LED" Pin="31" />
+  <Output Name="GSL LED" Pin="53" />
+  <Output Name="ALT LED" Pin="51" />
+  <Output Name="VS LED" Pin="49" />
+  <Output Name="MACH LED" Pin="47" />
+  <Output Name="V NAV LED" Pin="45" />
+  <Output Name="IAS LED" Pin="43" />
+  <Output Name="V/L LED" Pin="41" />
+  <Output Name="B LOC LED" Pin="39" />
+  <Output Name="TURB LED" Pin="37" />
+  <Output Name="L NAV LED" Pin="35" />
+  <Output Name="HDG LED" Pin="33" />
+  <Button Name="AP BTN" Pin="30" />
+  <Button Name="GSL BTN" Pin="52" />
+  <Button Name="ALT BTN" Pin="50" />
+  <Button Name="VS BTN" Pin="48" />
+  <Button Name="MACH BTN" Pin="46" />
+  <Button Name="V NAV BTN" Pin="44" />
+  <Button Name="IAS BTN" Pin="42" />
+  <Button Name="V/L BTN" Pin="40" />
+  <Button Name="B LOC BTN" Pin="38" />
+  <Button Name="TURB BTN" Pin="36" />
+  <Button Name="L NAV BTN" Pin="34" />
+  <Button Name="HDG BTN" Pin="32" />
+  <Button Name="NAV SEL SPLIT" Pin="9" />
+  <Button Name="NAV SEL NAV1" Pin="10" />
+  <Button Name="NAV SEL NAV2" Pin="8" />
+  <Encoder Name="HDG ENC" PinLeft="13" PinRight="12" EncoderType="0" />
+  <Button Name="HDG ENC BTN" Pin="11" />
+  <Encoder Name="NAV1 CRS ENC" PinLeft="6" PinRight="7" EncoderType="0" />
+  <Button Name="NAV1 CRS BTN" Pin="5" />
+  <Encoder Name="NAV2 CRS ENC" PinLeft="2" PinRight="3" EncoderType="0" />
+  <Button Name="NAV2 CRS BTN" Pin="4" />
+  <Button Name="ALT ARM BTN" Pin="67" />
+  <Output Name="ALT ARM LED" Pin="66" />
+  <LedModule Name="7-SEGS" DinPin="65" ClsPin="64" ClkPin="63" Brightness="15" NumModules="3" />
+  <Encoder Name="ALT SEL ENC" PinLeft="62" PinRight="61" EncoderType="0" />
+  <Button Name="ALT SEL BTN UNUSE" Pin="60" />
+  <LcdDisplay Name="VHF LCD" Address="39" Cols="16" Lines="2" />
+  <Button Name="VHF MODE SWTCH" Pin="19" />
+  <Button Name="VHF SWAP BTN" Pin="54" />
+  <Output Name="VHF LED ALERT" Pin="22" />
+  <Output Name="VHF LED HOLD" Pin="23" />
+  <Button Name="VHF NAV OFF" Pin="16" />
+  <Button Name="VHF NAV STBY" Pin="17" />
+  <Button Name="VHF NAV ON" Pin="14" />
+  <Button Name="VHF NAV HOLD" Pin="18" />
+  <Button Name="VHF NAV ORIDE" Pin="15" />
+  <Encoder Name="VHF ENC OUT" PinLeft="58" PinRight="56" EncoderType="0" />
+  <Encoder Name="VHF ENC IN" PinLeft="57" PinRight="59" EncoderType="0" />
+  <Button Name="VHF ENC BTN" Pin="55" />
+  <Button Name="FD BARS" Pin="25" />
+  <Button Name="MWS AMBER BTN" Pin="28" />
+  <Output Name="MWS AMBER LED" Pin="29" />
+  <Button Name="MWS RED BTN" Pin="26" />
+  <Output Name="MWS RED LED" Pin="27" />
+</Config>

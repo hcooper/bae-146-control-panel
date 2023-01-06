@@ -1,0 +1,1112 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs>
+    <config guid="1e0de6dd-66dc-4a87-af45-8032ce9e12c8">
+      <active>true</active>
+      <description>Vertical Speed</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:VERTICAL SPEED, feet/minute)" UUID="3110ef7c-3b03-4d05-99d6-fb582d3ac3f8" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="Stepper" serial="Dials/ SN-142-2e3" trigger="normal" stepperAddress="Vertical Speed" stepperInputRev="1000" stepperOutputRev="2048" stepperTestValue="500" stepperCompassMode="False" />
+        <interpolation active="True">
+          <value x="-6000" y="500" />
+          <value x="-4000" y="400" />
+          <value x="-2000" y="300" />
+          <value x="-1000" y="200" />
+          <value x="-500" y="100" />
+          <value x="0" y="0" />
+          <value x="500" y="-100" />
+          <value x="1000" y="-200" />
+          <value x="2000" y="-300" />
+          <value x="4000" y="-400" />
+          <value x="6000" y="-500" />
+        </interpolation>
+        <preconditions />
+        <transformation active="True" expression="0-$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="89d315f6-2b26-4765-b922-cb9995b74194">
+      <active>true</active>
+      <description>Altitude</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:INDICATED ALTITUDE,Feet)" UUID="3110ef7c-3b03-4d05-99d6-fb582d3ac3f8" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="Stepper" serial="Dials/ SN-142-2e3" trigger="normal" stepperAddress="Altitude" stepperInputRev="1000" stepperOutputRev="2048" stepperTestValue="800" stepperCompassMode="False" />
+        <preconditions />
+        <transformation active="False" expression="0-$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="74ff3fb5-8147-4be4-93ba-d8badb0421dd">
+      <active>true</active>
+      <description>7-SEG ALT SEL</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Alt_dig1, number) 10000 * (L:MCP_Alt_dig2, number) 1000 * + (L:MCP_Alt_dig3, number) 100 * +" UUID="a5bc5738-db9c-4569-b4e1-88bd8a6fa14b" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Display Module" serial="Controls/ SN-850-5fd" trigger="normal" ledAddress="7-SEGS" ledConnector="1" ledModuleSize="5" ledPadding="True" ledReverseDigits="True" ledBrightnessRef="d5a51353-c246-425f-b4cc-57d490fcb0a8" ledPaddingChar="0" ledDigits="0,1,2,3,4" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f0d756a5-b25d-4a74-8363-0a06fc8ec138">
+      <active>true</active>
+      <description>7-SEG NAV2</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_NAV2_dig1, number) 100 * (L:MCP_NAV2_dig2, number) 10 * + (L:MCP_NAV2_dig3, number) +" UUID="b6b20f0b-411d-422b-b75b-c0ca60302647" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Display Module" serial="Controls/ SN-850-5fd" trigger="normal" ledAddress="7-SEGS" ledConnector="2" ledModuleSize="3" ledPadding="True" ledReverseDigits="True" ledPaddingChar="0" ledDigits="0,1,2" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="32fb4a82-e5fc-4d1b-9bfb-7f270f056f27">
+      <active>true</active>
+      <description>7-SEG NAV1</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_NAV1_dig1, number) 100 * (L:MCP_NAV1_dig2, number) 10 * + (L:MCP_NAV1_dig3, number) +" UUID="a731287c-911f-432c-a831-64f2d1becaec" />
+        <comparison active="False" value="360" operand="=" ifValue="000" elseValue="" />
+        <display type="Display Module" serial="Controls/ SN-850-5fd" trigger="normal" ledAddress="7-SEGS" ledConnector="3" ledModuleSize="3" ledPadding="True" ledReverseDigits="True" ledPaddingChar="0" ledDigits="0,1,2" />
+        <interpolation active="True">
+          <value x="0" y="0" />
+          <value x="1024" y="1024" />
+        </interpolation>
+        <preconditions />
+        <transformation active="False" expression="$ - 195" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1a6f2e51-2869-4ca2-858e-c3a7ceb7f897">
+      <active>true</active>
+      <description>ALT ARM LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Alt_arm_iL, bool) if{ 1 } els{ 0 }" UUID="e99506f5-5243-455d-9a01-844d238d6f64" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="ALT ARM LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="72458009-0189-4332-85c0-18adc37b9e08">
+      <active>true</active>
+      <description>VHF LED ALERT</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:L_VHFNAV_Alert_il)" UUID="0" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="VHF LED ALERT" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="05769264-e672-46f7-a12c-0fa3cbe61fd8">
+      <active>true</active>
+      <description>VHF LCD [NAV]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="VHF NAV 2ND" varExpression="$" />
+        <comparison active="False" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="LcdDisplay" serial="Controls/ SN-850-5fd" trigger="normal" address="VHF LCD">
+          <line>NAV ACT: ###.###</line>
+          <line>NAV STB: !!!.!!!</line>
+        </display>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="0" logic="and" />
+          <precondition type="config" active="true" ref="dd36708b-d62a-4510-b2a9-98f132902e0b" operand="=" value="1" logic="and" />
+        </preconditions>
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs>
+          <configref active="True" ref="a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3" placeholder="#" />
+          <configref active="True" ref="27bc3754-81e3-4cb7-8013-57a068882baf" placeholder="!" />
+        </configrefs>
+      </settings>
+    </config>
+    <config guid="e99238e7-94f7-4d8a-9cea-c4c1c8025ec4">
+      <active>true</active>
+      <description>VHF LCD [NAV] OFF</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="" varExpression="$" />
+        <comparison active="False" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="LcdDisplay" serial="Controls/ SN-850-5fd" trigger="normal" address="VHF LCD">
+          <line />
+        </display>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="0" logic="and" />
+          <precondition type="config" active="true" ref="dd36708b-d62a-4510-b2a9-98f132902e0b" operand="=" value="0" logic="and" />
+        </preconditions>
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="76b61bcb-20cb-4b0e-9e9e-e853c5aec76f">
+      <active>true</active>
+      <description>VHF LCD [COM]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="VHF COM 2ND" varExpression="$" />
+        <comparison active="False" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="LcdDisplay" serial="Controls/ SN-850-5fd" trigger="normal" address="VHF LCD">
+          <line>COM ACT: ###.###</line>
+          <line>COM STB: !!!.!!!</line>
+        </display>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+          <precondition type="config" active="true" ref="9a982b7e-2d58-4f49-8bb2-a7debac1cb77" operand="=" value="1" logic="and" />
+        </preconditions>
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs>
+          <configref active="True" ref="d5978e55-5064-41eb-b20d-c683236abade" placeholder="#" />
+          <configref active="True" ref="0dfe1dca-4544-4bd6-a7be-3159ed13f9e8" placeholder="!" />
+        </configrefs>
+      </settings>
+    </config>
+    <config guid="34be2c2f-934b-404a-8569-b78bcf27e54c">
+      <active>true</active>
+      <description>VHF LCD [COM] OFF</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="VHF COM 2ND" varExpression="$" />
+        <comparison active="False" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="LcdDisplay" serial="Controls/ SN-850-5fd" trigger="normal" address="VHF LCD">
+          <line />
+        </display>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+          <precondition type="config" active="true" ref="9a982b7e-2d58-4f49-8bb2-a7debac1cb77" operand="=" value="0" logic="and" />
+        </preconditions>
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="70d12aca-9e99-4190-98f7-6e94a22a99df">
+      <active>true</active>
+      <description>GSL LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_GSL_il, bool) if{ 1 } els{ 0 }" UUID="981e627a-1bad-43ea-9a77-12c521a3a019" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="GSL LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="c9ef9fb6-b068-4b43-9a61-649e27afe077">
+      <active>true</active>
+      <description>ALT LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_ALT_iL, bool) if{ 1 } els{ 0 }" UUID="1fac4500-d370-45cf-9d6b-6886bd98b8cd" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="ALT LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="26f7242d-a73d-443e-a064-0a7461db8153">
+      <active>true</active>
+      <description>VS LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_VS_iL, bool) if{ 1 } els{ 0 }" UUID="9048c8df-6a44-4654-bf9d-5caaeb42afbe" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="VS LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ef80f5de-89d1-4906-a335-d48463d0bef9">
+      <active>true</active>
+      <description>MACH LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_MACH_iL, bool) if{ 1 } els{ 0 }" UUID="430928bc-41b3-4625-90d2-fda709da64a3" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="MACH LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="18b4770b-c5cd-4c54-b239-376ac4fe5df7">
+      <active>true</active>
+      <description>V NAV LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_VNAV_i, bool) if{ 1 } els{ 0 }" UUID="00c2aba2-08d3-4320-b6cc-1a279070634d" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="V NAV LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b5b7d950-32fd-42c4-b49f-4b6e1a20c53d">
+      <active>true</active>
+      <description>IAS LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_IAS_iL, bool) if{ 1 } els{ 0 }" UUID="76156b37-b45b-4af9-8000-0e716d07fd32" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="IAS LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="168d37cd-f26d-484a-b262-42794fd58dd1">
+      <active>true</active>
+      <description>V/L LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_VL_il, bool) if{ 1 } els{ 0 }" UUID="095105fa-e5fc-4507-a435-dbbde791f3d1" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="V/L LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="48ce3869-063e-4f17-b77c-5b11da674c47">
+      <active>true</active>
+      <description>B LOC LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_BLOC_il, bool) if{ 1 } els{ 0 }" UUID="7baa31dc-4109-4d52-85ce-8a13f1f0a0cd" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="B LOC LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0a2cf663-4897-4554-95ae-e4ed3960544c">
+      <active>true</active>
+      <description>TURB LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_TURB_il, bool) if{ 1 } els{ 0 }" UUID="27f8f68d-5da2-4ed0-892d-f15b22af56c8" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="TURB LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="3cfd2bfb-28ac-485f-99fa-68ea78109319">
+      <active>true</active>
+      <description>L NAV LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_LNAV_iL, bool) if{ 1 } els{ 0 }" UUID="fcb85ab2-aa00-4a9d-b7c7-6ed9d1b0a1ea" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="L NAV LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="dee073d3-2951-4ef5-a4c7-ef544c16227f">
+      <active>true</active>
+      <description>HDG LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_HDG_iL, bool) if{ 1 } els{ 0 }" UUID="78d24276-1e34-41fe-89ba-1dedefc8a552" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="HDG LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="64a74f3d-6dd6-419a-bc2c-a4bbf36473e6">
+      <active>true</active>
+      <description>AP LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:MCP_Mode_AP_iL, bool) if{ 1 } els{ 0 }" UUID="52fbfe1c-5a98-427c-ac03-8627fc3b4abd" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="AP LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f1eff4b4-9c37-4569-8c61-7d83d034a8d6">
+      <active>true</active>
+      <description>VHF LED HOLD</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:L_VHFNAV_Hold_il)" UUID="-" />
+        <comparison active="True" value="" operand="=" ifValue="1" elseValue="0" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="VHF LED HOLD" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d3f19076-fe7e-4e0f-aa55-83c585e34dfe">
+      <active>true</active>
+      <description>[VHF MODE]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="VHF MODE" varExpression="$" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3">
+      <active>true</active>
+      <description>[VHF NAV ACT]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value=" (A:NAV ACTIVE FREQUENCY:1,KHz)" UUID="37a19dbf-bfc5-4193-ac3e-591772069e42" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="27bc3754-81e3-4cb7-8013-57a068882baf">
+      <active>true</active>
+      <description>[VHF NAV STB]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:NAV STANDBY FREQUENCY:1,KHz)" UUID="73a2f48d-d613-4b7b-b30d-8065bc150f98" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="Controls/ SN-850-5fd" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d5978e55-5064-41eb-b20d-c683236abade">
+      <active>true</active>
+      <description>[VHF COM ACT]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:COM ACTIVE FREQUENCY:1, KHz) near" UUID="b5a95362-411e-422d-9e6e-598b8b0bdcdf" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="52029443-5dc2-451a-ab58-9904fe0f341b">
+      <active>false</active>
+      <description>[VHF COM ACT] Copy</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:COM ACTIVE FREQUENCY:1, KHz) near" UUID="0dd2e7e3-46b0-46da-863f-2fac9097358b" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0dfe1dca-4544-4bd6-a7be-3159ed13f9e8">
+      <active>true</active>
+      <description>[VHF COM STB]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:COM STANDBY FREQUENCY:1,KHz)" UUID="b0d721be-f687-4250-81a6-0bb2a437f96c" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9d693000-e49c-41c9-85b2-eae0a2d92bef">
+      <active>false</active>
+      <description>7SEG BRIGHTNESS</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="LVAR" Value="" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="dd36708b-d62a-4510-b2a9-98f132902e0b">
+      <active>true</active>
+      <description>[VHF NAV LCD ON]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:L_VHFNAV_Knob_on)" UUID="-" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9a982b7e-2d58-4f49-8bb2-a7debac1cb77">
+      <active>true</active>
+      <description>[VHF NAV COM ON]</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:PED_FWD_L_VHF_Mode)" UUID="0" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2b7d10f2-91c0-4b2b-9c08-02545538b088">
+      <active>true</active>
+      <description>(L:L_VHFNAV_mode)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:L_VHFNAV_mode)" UUID="-" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca">
+      <active>true</active>
+      <description>(L:PED_FWD_L_VHF_Tfr)</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:PED_FWD_L_VHF_Tfr)" UUID="-" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d8105d69-5898-40f7-b74b-91a4980cc2b0">
+      <active>true</active>
+      <description>MWS RED LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:L_COAMING_MWS_Red_il)" UUID="0" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="MWS RED LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="91d8e839-8c6a-4675-b802-188a1518a208">
+      <active>true</active>
+      <description>MWS AMBER LED</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:L_COAMING_MWS_Amber_il)" UUID="0" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="Pin" serial="Controls/ SN-850-5fd" trigger="normal" pin="MWS AMBER LED" pinBrightness="255" />
+        <preconditions />
+        <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d5a51353-c246-425f-b4cc-57d490fcb0a8">
+      <active>false</active>
+      <description>7SEG BRIGHTNESS</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="VHF NAV 2ND" varExpression="$" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="" serial="-" trigger="normal" pin="" pinBrightness="255" />
+        <preconditions />
+        <transformation active="True" expression="4" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a3c18f37-a4fc-40b0-b8c9-1d1370cc6500">
+      <active>true</active>
+      <description>IAS Dial</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:AIRSPEED INDICATED,Knots)" UUID="bbb26a5f-319a-49bf-b48a-1f4e0da43e32" />
+        <comparison active="False" value="" operand="" ifValue="" elseValue="" />
+        <display type="Stepper" serial="Dials/ SN-142-2e3" trigger="normal" stepperAddress="IAS" stepperInputRev="1000" stepperOutputRev="2048" stepperTestValue="-428" stepperCompassMode="False" />
+        <interpolation active="True">
+          <value x="0" y="0" />
+          <value x="60" y="-45" />
+          <value x="100" y="-224" />
+          <value x="120" y="-300" />
+          <value x="140" y="-367" />
+          <value x="160" y="-428" />
+          <value x="200" y="-540" />
+          <value x="250" y="-652" />
+          <value x="300" y="-753" />
+          <value x="400" y="-921" />
+        </interpolation>
+        <preconditions />
+        <transformation active="True" expression="0-$" substrStart="0" substrEnd="7" />
+        <configrefs />
+      </settings>
+    </config>
+  </outputs>
+  <inputs>
+    <config guid="64e3085b-016b-4b6f-96cb-1a4caf395da5">
+      <active>true</active>
+      <description>VHF SWAP BTN [NAV]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF SWAP BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_SWAP)" presetId="72e5dd2a-4e9d-4d61-940a-e523202f8dd0" />
+          <onRelease />
+        </button>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b54abc14-f575-4039-8707-7c4fead47cb6">
+      <active>true</active>
+      <description>VHF SWAP BTN [COM]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF SWAP BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Tfr) ! (&gt;L:PED_FWD_L_VHF_Tfr)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="88e54ae2-5a67-4c32-935a-d697e2744743">
+      <active>true</active>
+      <description>VHF ENC PWR BTN [NAV]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:L_VHFNAV_Knob_on) ! (&gt;L:L_VHFNAV_Knob_on) " presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ece1b313-2d58-4c49-8aa6-420be5c66c9b">
+      <active>true</active>
+      <description>VHF ENC PWR BTN [COM]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Mode) ! (&gt;L:PED_FWD_L_VHF_Mode)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="88ded3c6-2865-4fc1-ad26-364dd5ac1288">
+      <active>true</active>
+      <description>VHF ENC IN [NAV]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC IN" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_FRACT_DEC)" presetId="f92f319c-75e2-471e-845a-764540c65040" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_FRACT_INC)" presetId="91d424e5-4d6a-48a0-a435-153331c604b3" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="3f9bd397-07cf-47a3-b2dd-b487757fcebb">
+      <active>true</active>
+      <description>VHF ENC IN [COM] COM1 ACT</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC IN" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Stby_inner) -- (&gt;L:PED_FWD_L_VHF_Stby_inner)" presetId="0" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Stby_inner) ++ (&gt;L:PED_FWD_L_VHF_Stby_inner)" presetId="0" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+          <precondition type="config" active="true" ref="9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="fdd193c7-bbf7-4d0d-bf8b-5231c0156d2e">
+      <active>true</active>
+      <description>VHF ENC OUT [COM] COM1 ACT</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC OUT" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Stby_outer) -- (&gt;L:PED_FWD_L_VHF_Stby_outer)" presetId="0" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Stby_outer) ++ (&gt;L:PED_FWD_L_VHF_Stby_outer)" presetId="0" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+          <precondition type="config" active="true" ref="9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="779f1e4e-9135-46ba-962a-36e8e9f3b668">
+      <active>true</active>
+      <description>VHF ENC IN [COM] COM2 ACT</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC IN" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Act_inner) -- (&gt;L:PED_FWD_L_VHF_Act_inner)" presetId="0" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Act_inner) ++ (&gt;L:PED_FWD_L_VHF_Act_inner)" presetId="0" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+          <precondition type="config" active="true" ref="9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="436edf19-d068-40e4-86f1-0b39b782c69a">
+      <active>true</active>
+      <description>VHF ENC OUT [COM] COM2 ACT</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC OUT" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Act_outer) -- (&gt;L:PED_FWD_L_VHF_Act_outer)" presetId="0" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:PED_FWD_L_VHF_Act_outer) ++ (&gt;L:PED_FWD_L_VHF_Act_outer)" presetId="0" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="1" logic="and" />
+          <precondition type="config" active="true" ref="9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca" operand="=" value="1" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="56052c5a-8c09-4dc3-8571-f63500283e78">
+      <active>true</active>
+      <description>VHF ENC OUT [NAV]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF ENC OUT" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_WHOLE_DEC)" presetId="bcb45f55-c67a-44b9-a951-096e450ccec7" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(&gt;K:NAV1_RADIO_WHOLE_INC)" presetId="1ae481bc-bea6-4f58-a683-01c9d0c38e32" />
+          <onRightFast />
+        </encoder>
+        <preconditions>
+          <precondition type="config" active="true" ref="d3f19076-fe7e-4e0f-aa55-83c585e34dfe" operand="=" value="0" logic="and" />
+        </preconditions>
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="57a90fd0-a38b-43b2-9bad-d7703181884e">
+      <active>false</active>
+      <description>ALT SEL BTN UNUSE</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="ALT SEL BTN UNUSE" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b49d70dc-3d36-4a24-a25e-6167571418dc">
+      <active>true</active>
+      <description>ALT SEL ENC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="ALT SEL ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:MCP_Alt_sel_knob) -- (&gt;L:MCP_Alt_sel_knob)" presetId="ed213a73-34d7-40b3-a2f1-ecec6f9daf5f" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:MCP_Alt_sel_knob) ++ (&gt;L:MCP_Alt_sel_knob)" presetId="6937c70a-d75b-4b2d-8ef5-aa1bd3730994" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="40e9224f-72ed-4110-8d2b-bd76886c4697">
+      <active>true</active>
+      <description>ALT ARM BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="ALT ARM BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_ALT_arm)" presetId="9fcaba22-7e36-4803-b1bf-a66b6f13d931" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="50d213ee-9a61-4dec-a202-7b8dbf125559">
+      <active>true</active>
+      <description>GSL BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="GSL BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_GSL)" presetId="ed0d20f7-a7fc-4419-bc3f-2a4c17ae6b4d" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="551da61b-ca8c-4710-bb14-e30c56759a15">
+      <active>true</active>
+      <description>ALT BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="ALT BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_ALT)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="d379b493-2b13-4d02-a41f-ff08ace65619">
+      <active>true</active>
+      <description>VS BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VS BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_VS)" presetId="a5936429-32a8-430d-95eb-3e18e90b55d1" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="fe02cf9d-2810-4576-953d-a0e4a5d0c03e">
+      <active>true</active>
+      <description>MACH BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="MACH BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_MACH)" presetId="dfeaffa7-de8f-492b-86be-9858e1567358" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5d07411c-0525-4a01-ad5f-20d4d1823fa4">
+      <active>true</active>
+      <description>V NAV BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="V NAV BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_VNAV)" presetId="4f107c62-585a-41ac-8d21-f56e62e9bd9a" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2cb498f9-824a-4389-aa7a-0426c2268f69">
+      <active>true</active>
+      <description>IAS BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="IAS BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_IAS)" presetId="e26021f4-a69f-46a0-a8d0-3a47055e470a" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1336a82f-be15-457c-9909-0859758c8f43">
+      <active>true</active>
+      <description>V/L BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="V/L BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_VL)" presetId="d09fb2c4-7af8-4b9a-8e01-003b15c250e0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="91edd146-aa1a-438c-b9d9-e1a387dd3ea2">
+      <active>true</active>
+      <description>B LOC BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="B LOC BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_BLOC)" presetId="faa6bd1e-715d-4606-ac7d-c7d8e5d23861" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="743c500f-7665-4623-9bf0-106d37e4750d">
+      <active>true</active>
+      <description>TURB BTN (SYNC)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="TURB BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_TURB)" presetId="a1fed136-cfdd-4d63-b2be-1b72695e07ae" />
+          <onRelease type="RetriggerInputAction" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4010fb94-687f-4968-a2c1-a461300f07a9">
+      <active>true</active>
+      <description>L NAV BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="L NAV BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_LNAV)" presetId="bd964c25-e45c-488c-86f1-75ded1545a99" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="964e0b5e-cfed-4289-a409-33d3096298c0">
+      <active>true</active>
+      <description>HDG BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="HDG BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_Mode_HDG)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4fb7135b-debb-4771-954d-d8f55bcba7c7">
+      <active>true</active>
+      <description>AP BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="AP BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:AP_MASTER)" presetId="b17146c8-2db3-4239-b797-e7bc11d557da" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1beede9f-037b-4068-8517-528262b89026">
+      <active>true</active>
+      <description>HDG ENC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="HDG ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:MCP_HDG_sel) -- (&gt;L:MCP_HDG_sel)" presetId="0" />
+          <onLeftFast type="MSFS2020CustomInputAction" command="(L:MCP_HDG_sel) 10 - (&gt;L:MCP_HDG_sel)" presetId="0" />
+          <onRight type="MSFS2020CustomInputAction" command="(L:MCP_HDG_sel) ++ (&gt;L:MCP_HDG_sel)" presetId="0" />
+          <onRightFast type="MSFS2020CustomInputAction" command="(L:MCP_HDG_sel) 10 + (&gt;L:MCP_HDG_sel)" presetId="-" />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="175628c4-6dc2-45e3-b56b-c596fae70a74">
+      <active>false</active>
+      <description>HDG ENC BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="HDG ENC BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="3467273c-5e09-44c5-a692-6fe61c499a1d">
+      <active>true</active>
+      <description>NAV SEL NAV1</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV SEL NAV1" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:MCP_NAV_split)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="422215a4-a303-4d1c-ba60-ca9c6aa17d8c">
+      <active>true</active>
+      <description>NAV SEL SPLIT</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV SEL SPLIT" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:MCP_NAV_split)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="eb376968-fa2f-4c67-b997-f1b63c64a15c">
+      <active>true</active>
+      <description>NAV SEL NAV2</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV SEL NAV2" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:MCP_NAV_split)" presetId="-" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="ef1fdc8c-8986-4309-bd91-d1681deadf78">
+      <active>true</active>
+      <description>NAV1 CRS ENC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV1 CRS ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:MCP_NAV1_sel, number) -- (&gt;L:MCP_NAV1_sel)" presetId="0" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:MCP_NAV1_sel, number) ++ (&gt;L:MCP_NAV1_sel)" presetId="0" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="2e2e2053-6d03-4f24-aa36-c2da838a3c2d">
+      <active>false</active>
+      <description>NAV1 CRS BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV1 CRS BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b31d1804-8090-4a75-a8c9-c41986fe303d">
+      <active>false</active>
+      <description>NAV2 CRS BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV2 CRS BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0a039472-becd-446e-b4c3-6df82a163331">
+      <active>true</active>
+      <description>NAV2 CRS ENC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="NAV2 CRS ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:MCP_NAV2_sel, number) 1 - (&gt;L:MCP_NAV2_sel)" presetId="-" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="(L:MCP_NAV2_sel, number) 1 + (&gt;L:MCP_NAV2_sel)" presetId="-" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="06366c86-70c5-4293-a8e9-df2d515adb74">
+      <active>true</active>
+      <description>VHF NAV ON</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF NAV ON" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="2 (&gt;L:L_VHFNAV_mode)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4de0d617-3177-4ec3-b6a4-f0afd052cd6b">
+      <active>true</active>
+      <description>VHF NAV ORIDE</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF NAV ORIDE" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="4 (&gt;L:L_VHFNAV_mode)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="592ce5f7-d874-43f9-911d-ae9d2855e9df">
+      <active>true</active>
+      <description>VHF NAV OFF</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF NAV OFF" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:L_VHFNAV_mode)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="53a238d5-638f-4c9b-a23b-7fffa7ebfe5e">
+      <active>true</active>
+      <description>VHF NAV STBY</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF NAV STBY" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:L_VHFNAV_mode)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="83475880-b126-4047-8592-3e5a35a84317">
+      <active>true</active>
+      <description>VHF NAV HOLD</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF NAV HOLD" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="3 (&gt;L:L_VHFNAV_mode)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="20a2a8b5-37de-42a7-bae0-ea610de40d7c">
+      <active>true</active>
+      <description>VHF MODE SWTCH</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="VHF MODE SWTCH" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="VariableInputAction" varType="number" varName="VHF MODE" varExpression="0" />
+          <onRelease type="VariableInputAction" varType="number" varName="VHF MODE" varExpression="1" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="156ed8a5-75c9-4038-8ead-10b0c73c8132">
+      <active>false</active>
+      <description>[VHF FRQ 1 NAV]</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="" name="" type="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="08f04093-3026-4320-b423-eec9b0640d5b">
+      <active>false</active>
+      <description>[VHF FRQ 2 NAV]</description>
+    </config>
+    <config guid="01191d76-6484-4dcd-820e-f357200395b0">
+      <active>false</active>
+      <description>[VHF FRQ 3 COM]</description>
+    </config>
+    <config guid="3f4e6a26-b202-4295-83f8-c267e55ffce5">
+      <active>false</active>
+      <description>[VHF FRQ 4 COM]</description>
+    </config>
+    <config guid="cb020277-70f2-4d57-b4bb-2bb0a1af63bd">
+      <active>true</active>
+      <description>FD BARS</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="FD BARS" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="0 (&gt;L:L_COAMING_FD_bars)" presetId="0" />
+          <onRelease type="MSFS2020CustomInputAction" command="1 (&gt;L:L_COAMING_FD_bars)" presetId="0" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4b4e7158-85bc-44a8-8aca-ba62b3b08c70">
+      <active>true</active>
+      <description>MWS RED BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="MWS RED BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:L_COAMING_MWS_Red)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="4099ed0e-c82a-4971-a735-a870cee11e42">
+      <active>true</active>
+      <description>MWS AMBER BTN</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.5.0.0, Culture=neutral, PublicKeyToken=null" serial="Controls/ SN-850-5fd" name="MWS AMBER BTN" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="1 (&gt;L:L_COAMING_MWS_Amber)" presetId="0" />
+          <onRelease />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
