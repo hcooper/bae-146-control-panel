@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight Micro</ModuleType>
+  <ModuleName>146 Heading</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <LedModule Name="LedModule" ModelType="0" DinPin="16" ClsPin="14" ClkPin="15" Brightness="15" NumModules="2" />
+  <Encoder Name="NAV1 ENC" PinLeft="2" PinRight="3" EncoderType="1" />
+  <Encoder Name="HDG ENC" PinLeft="4" PinRight="5" EncoderType="1" />
+  <Encoder Name="NAV2  ENC" PinLeft="6" PinRight="7" EncoderType="1" />
+  <Button Name="NAV1 BTN" Pin="8" />
+  <Button Name="HDG BTN" Pin="9" />
+  <Button Name="NAV2 BTN" Pin="21" />
+  <Button Name="NAV1 SELECT" Pin="18" />
+  <Button Name="NAV SPLIT SELECT" Pin="19" />
+  <Button Name="NAV2 SELECT" Pin="20" />
+</Config>

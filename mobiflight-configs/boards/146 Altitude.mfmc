@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight Micro</ModuleType>
+  <ModuleName>146 Altitude</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <LedModule Name="7 SEG" ModelType="0" DinPin="16" ClsPin="14" ClkPin="15" Brightness="15" NumModules="1" />
+  <Output Name="ALT ARM LED" Pin="5" />
+  <Button Name="ALT ARM BTN" Pin="6" />
+  <Encoder Name="ALT SEL ENC" PinLeft="2" PinRight="3" EncoderType="1" />
+  <Button Name="ALT SEL ENC BTN" Pin="4" />
+</Config>

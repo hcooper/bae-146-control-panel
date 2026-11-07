@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight Mega</ModuleType>
   <ModuleName>Controls</ModuleName>
   <PowerSavingTime>600</PowerSavingTime>
   <Output Name="AP LED" Pin="31" />
@@ -29,16 +30,16 @@
   <Button Name="NAV SEL SPLIT" Pin="9" />
   <Button Name="NAV SEL NAV1" Pin="10" />
   <Button Name="NAV SEL NAV2" Pin="8" />
-  <Encoder Name="HDG ENC" PinLeft="13" PinRight="12" EncoderType="0" />
+  <Encoder Name="HDG ENC" PinLeft="13" PinRight="12" EncoderType="1" />
   <Button Name="HDG ENC BTN" Pin="11" />
-  <Encoder Name="NAV1 CRS ENC" PinLeft="6" PinRight="7" EncoderType="0" />
+  <Encoder Name="NAV1 CRS ENC" PinLeft="6" PinRight="7" EncoderType="1" />
   <Button Name="NAV1 CRS BTN" Pin="5" />
-  <Encoder Name="NAV2 CRS ENC" PinLeft="2" PinRight="3" EncoderType="0" />
+  <Encoder Name="NAV2 CRS ENC" PinLeft="2" PinRight="3" EncoderType="1" />
   <Button Name="NAV2 CRS BTN" Pin="4" />
   <Button Name="ALT ARM BTN" Pin="67" />
   <Output Name="ALT ARM LED" Pin="66" />
-  <LedModule Name="7-SEGS" DinPin="65" ClsPin="64" ClkPin="63" Brightness="15" NumModules="3" />
-  <Encoder Name="ALT SEL ENC" PinLeft="62" PinRight="61" EncoderType="0" />
+  <LedModule Name="7-SEGS" ModelType="0" DinPin="65" ClsPin="64" ClkPin="63" Brightness="15" NumModules="3" />
+  <Encoder Name="ALT SEL ENC" PinLeft="62" PinRight="61" EncoderType="1" />
   <Button Name="ALT SEL BTN UNUSE" Pin="60" />
   <LcdDisplay Name="VHF LCD" Address="39" Cols="16" Lines="2" />
   <Button Name="VHF MODE SWTCH" Pin="19" />
@@ -50,8 +51,8 @@
   <Button Name="VHF NAV ON" Pin="14" />
   <Button Name="VHF NAV HOLD" Pin="18" />
   <Button Name="VHF NAV ORIDE" Pin="15" />
-  <Encoder Name="VHF ENC OUT" PinLeft="58" PinRight="56" EncoderType="0" />
-  <Encoder Name="VHF ENC IN" PinLeft="57" PinRight="59" EncoderType="0" />
+  <Encoder Name="VHF ENC OUT" PinLeft="58" PinRight="56" EncoderType="2" />
+  <Encoder Name="VHF ENC IN" PinLeft="57" PinRight="59" EncoderType="2" />
   <Button Name="VHF ENC BTN" Pin="55" />
   <Button Name="FD BARS" Pin="25" />
   <Button Name="MWS AMBER BTN" Pin="28" />

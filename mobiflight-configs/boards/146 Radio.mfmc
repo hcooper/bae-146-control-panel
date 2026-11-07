@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight Micro</ModuleType>
+  <ModuleName>146 Radio</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <LcdDisplay Name="LcdDisplay" Address="39" Cols="16" Lines="2" />
+  <InputMultiplexer Name="4067 Multiplexer" DataPin="15" NumBytes="2">
+    <Selector Name="MultiplexerDriver" PinSx="21 20 19 18" />
+  </InputMultiplexer>
+  <Output Name="HOLD LED" Pin="7" />
+  <Output Name="ALERT LED" Pin="6" />
+  <Output Name="CAUTION LED" Pin="5" />
+  <Output Name="ALARM LED" Pin="4" />
+  <Encoder Name="Encoder" PinLeft="8" PinRight="9" EncoderType="2" />
+  <Encoder Name="Encoder 1" PinLeft="14" PinRight="16" EncoderType="2" />
+</Config>
