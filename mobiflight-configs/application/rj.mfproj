@@ -1,5 +1,5 @@
 {
-  "Name": "avro-migrated",
+  "Name": "rj",
   "ConfigFiles": [
     {
       "Label": "🧑‍✈️ Autopilot",
@@ -26,6 +26,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "GSL LED",
           "GUID": "70d12aca-9e99-4190-98f7-6e94a22a99df",
           "Active": true,
           "Name": "GSL LED",
@@ -72,6 +74,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "ALT LED",
           "GUID": "c9ef9fb6-b068-4b43-9a61-649e27afe077",
           "Active": true,
           "Name": "ALT LED",
@@ -118,6 +122,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "VS LED",
           "GUID": "26f7242d-a73d-443e-a064-0a7461db8153",
           "Active": true,
           "Name": "VS LED",
@@ -164,6 +170,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "MACH LED",
           "GUID": "ef80f5de-89d1-4906-a335-d48463d0bef9",
           "Active": true,
           "Name": "MACH LED",
@@ -210,6 +218,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "V NAV LED",
           "GUID": "18b4770b-c5cd-4c54-b239-376ac4fe5df7",
           "Active": true,
           "Name": "V NAV LED",
@@ -256,6 +266,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "IAS LED",
           "GUID": "b5b7d950-32fd-42c4-b49f-4b6e1a20c53d",
           "Active": true,
           "Name": "IAS LED",
@@ -302,6 +314,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "V/L LED",
           "GUID": "168d37cd-f26d-484a-b262-42794fd58dd1",
           "Active": true,
           "Name": "V/L LED",
@@ -348,6 +362,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "B LOC LED",
           "GUID": "48ce3869-063e-4f17-b77c-5b11da674c47",
           "Active": true,
           "Name": "B LOC LED",
@@ -394,6 +410,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "TURB LED",
           "GUID": "0a2cf663-4897-4554-95ae-e4ed3960544c",
           "Active": true,
           "Name": "TURB LED",
@@ -440,6 +458,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "L NAV LED",
           "GUID": "3cfd2bfb-28ac-485f-99fa-68ea78109319",
           "Active": true,
           "Name": "L NAV LED",
@@ -486,6 +506,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "HDG LED",
           "GUID": "dee073d3-2951-4ef5-a4c7-ef544c16227f",
           "Active": true,
           "Name": "HDG LED",
@@ -532,6 +554,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "AP LED",
           "GUID": "64a74f3d-6dd6-419a-bc2c-a4bbf36473e6",
           "Active": true,
           "Name": "AP LED",
@@ -859,54 +883,6 @@
         {
           "Source": {
             "SimConnectValue": {
-              "UUID": "33bb1e98-3c25-457d-9471-7d03e23daa7c",
-              "Value": "(L:JF_RJ_AP_HDG,number)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 123.0
-          },
-          "Device": {
-            "Name": "LedModule",
-            "DisplayLedAddress": "LedModule",
-            "DisplayLedConnector": 1,
-            "DisplayLedModuleSize": 8,
-            "DisplayLedPadding": true,
-            "DisplayLedPaddingChar": "0",
-            "DisplayLedDigits": [
-              "5",
-              "6",
-              "7"
-            ],
-            "DisplayLedDecimalPoints": [],
-            "DisplayLedReverseDigits": true,
-            "DisplayLedBrightnessReference": "",
-            "Type": "LedModule"
-          },
-          "GUID": "f0d756a5-b25d-4a74-8363-0a06fc8ec138",
-          "Active": true,
-          "Name": "7-SEG NAV2",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "Floor($)",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
               "UUID": "312c473b-eafb-46ea-8f39-587a7eb53068",
               "Value": "(L:JF_RJ_AP_IAS,number)",
               "VarType": 2
@@ -922,7 +898,7 @@
             "DisplayLedAddress": "LedModule",
             "DisplayLedConnector": 2,
             "DisplayLedModuleSize": 8,
-            "DisplayLedPadding": true,
+            "DisplayLedPadding": false,
             "DisplayLedPaddingChar": "0",
             "DisplayLedDigits": [
               "5",
@@ -934,6 +910,8 @@
             "DisplayLedBrightnessReference": "",
             "Type": "LedModule"
           },
+          "DeviceType": "Display Module",
+          "DeviceName": "LedModule",
           "GUID": "32fb4a82-e5fc-4d1b-9bfb-7f270f056f27",
           "Active": true,
           "Name": "7-SEG NAV1",
@@ -947,6 +925,56 @@
               {
                 "Type": "Transformation",
                 "Expression": "Round($ / 1, 0) * 1",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "33bb1e98-3c25-457d-9471-7d03e23daa7c",
+              "Value": "(L:JF_RJ_AP_HDG,number)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 123.0
+          },
+          "Device": {
+            "Name": "LedModule",
+            "DisplayLedAddress": "LedModule",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": false,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": true,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "LedModule",
+          "GUID": "f0d756a5-b25d-4a74-8363-0a06fc8ec138",
+          "Active": true,
+          "Name": "7-SEG NAV2",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Floor($)",
                 "Active": true
               }
             ]
@@ -1213,6 +1241,8 @@
             "DisplayLedBrightnessReference": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
             "Type": "LedModule"
           },
+          "DeviceType": "Display Module",
+          "DeviceName": "7 SEG",
           "GUID": "74ff3fb5-8147-4be4-93ba-d8badb0421dd",
           "Active": true,
           "Name": "7-SEG ALT SEL",
@@ -1266,6 +1296,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "ALT ARM LED",
           "GUID": "1a6f2e51-2869-4ca2-858e-c3a7ceb7f897",
           "Active": true,
           "Name": "ALT ARM LED",
@@ -1303,6 +1335,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "9d693000-e49c-41c9-85b2-eae0a2d92bef",
           "Active": false,
           "Name": "7SEG BRIGHTNESS",
@@ -1338,6 +1371,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
           "Active": false,
           "Name": "7SEG BRIGHTNESS",
@@ -1451,6 +1485,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "ALERT LED",
           "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
           "Active": true,
           "Name": "VHF LED ALERT",
@@ -1499,6 +1535,8 @@
             ],
             "Type": "LcdDisplay"
           },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
           "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
           "Active": true,
           "Name": "VHF LCD [NAV]",
@@ -1578,6 +1616,8 @@
             ],
             "Type": "LcdDisplay"
           },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
           "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
           "Active": true,
           "Name": "VHF LCD [NAV] OFF",
@@ -1644,6 +1684,8 @@
             ],
             "Type": "LcdDisplay"
           },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
           "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
           "Active": true,
           "Name": "VHF LCD [COM]",
@@ -1723,6 +1765,8 @@
             ],
             "Type": "LcdDisplay"
           },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
           "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
           "Active": true,
           "Name": "VHF LCD [COM] OFF",
@@ -1787,6 +1831,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "HOLD LED",
           "GUID": "f1eff4b4-9c37-4569-8c61-7d83d034a8d6",
           "Active": true,
           "Name": "VHF LED HOLD",
@@ -1826,6 +1872,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
           "Active": true,
           "Name": "[VHF MODE]",
@@ -1861,6 +1908,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
           "Active": true,
           "Name": "[VHF NAV ACT]",
@@ -1896,6 +1944,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "27bc3754-81e3-4cb7-8013-57a068882baf",
           "Active": true,
           "Name": "[VHF NAV STB]",
@@ -1931,6 +1980,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "d5978e55-5064-41eb-b20d-c683236abade",
           "Active": true,
           "Name": "[VHF COM ACT]",
@@ -1966,6 +2016,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "52029443-5dc2-451a-ab58-9904fe0f341b",
           "Active": false,
           "Name": "[VHF COM ACT] Copy",
@@ -2001,6 +2052,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
           "Active": true,
           "Name": "[VHF COM STB]",
@@ -2036,6 +2088,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "dd36708b-d62a-4510-b2a9-98f132902e0b",
           "Active": true,
           "Name": "[VHF NAV LCD ON]",
@@ -2071,6 +2124,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
           "Active": true,
           "Name": "[VHF NAV COM ON]",
@@ -2106,6 +2160,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "2b7d10f2-91c0-4b2b-9c08-02545538b088",
           "Active": true,
           "Name": "(L:L_VHFNAV_mode)",
@@ -2141,6 +2196,7 @@
             "type": 1,
             "Float64": 1.0
           },
+          "DeviceType": "",
           "GUID": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
           "Active": true,
           "Name": "(L:PED_FWD_L_VHF_Tfr)",
@@ -2183,6 +2239,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "ALARM LED",
           "GUID": "d8105d69-5898-40f7-b74b-91a4980cc2b0",
           "Active": true,
           "Name": "MWS RED LED",
@@ -2229,6 +2287,8 @@
             "PwmMode": false,
             "Type": "Output"
           },
+          "DeviceType": "Output",
+          "DeviceName": "CAUTION LED",
           "GUID": "91d8e839-8c6a-4675-b802-188a1518a208",
           "Active": true,
           "Name": "MWS AMBER LED",
