@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MobiFlight Mega</ModuleType>
+  <ModuleName>146 Autopilot</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+
+  <Button Name="GSL BTN" Pin="20" />
+  <Output Name="GSL LED" Pin="21" />
+  <Button Name="V/L BTN" Pin="22" />
+  <Output Name="V/L LED" Pin="23" />
+  <Button Name="B LOC BTN" Pin="24" />
+  <Output Name="B LOC LED" Pin="25" />
+  <Button Name="ALT BTN" Pin="26" />
+  <Output Name="ALT LED" Pin="27" />
+  <Button Name="AP BTN" Pin="28" />
+  <Output Name="AP LED" Pin="29" />
+  <Button Name="VS BTN" Pin="30" />
+  <Output Name="VS LED" Pin="31" />
+  <Button Name="TURB BTN" Pin="34" />
+  <Output Name="TURB LED" Pin="35" />
+  <Button Name="MACH BTN" Pin="36" />
+  <Output Name="MACH LED" Pin="37" />
+  <Button Name="V NAV BTN" Pin="38" />
+  <Output Name="V NAV LED" Pin="39" />
+  <Button Name="IAS BTN" Pin="40" />
+  <Output Name="IAS LED" Pin="41" />
+  <Button Name="L NAV BTN" Pin="42" />
+  <Output Name="L NAV LED" Pin="43" />
+  <Button Name="HDG BTN" Pin="44" />
+  <Output Name="HDG LED" Pin="45" />
+
+
+</Config>

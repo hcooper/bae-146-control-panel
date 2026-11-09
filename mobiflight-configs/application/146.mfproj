@@ -1,9 +1,8 @@
 {
-  "Name": "146",
+  "Name": "146-migrated",
   "ConfigFiles": [
     {
-      "Label": "146",
-      "FileName": "Z:\\Documents\\code\\bae-146-control-panel\\mobiflight-configs\\application\\146.mcc",
+      "Label": "146-migrated",
       "ReferenceOnly": false,
       "EmbedContent": true,
       "ConfigItems": [
@@ -21,8 +20,8 @@
             "Float64": 12345.0
           },
           "Device": {
-            "Name": "7-SEGS",
-            "DisplayLedAddress": "7-SEGS",
+            "Name": "7 SEG",
+            "DisplayLedAddress": "7 SEG",
             "DisplayLedConnector": 1,
             "DisplayLedModuleSize": 8,
             "DisplayLedPadding": true,
@@ -40,14 +39,14 @@
             "Type": "LedModule"
           },
           "DeviceType": "Display Module",
-          "DeviceName": "7-SEGS",
+          "DeviceName": "7 SEG",
           "GUID": "74ff3fb5-8147-4be4-93ba-d8badb0421dd",
           "Active": true,
           "Name": "7-SEG ALT SEL",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
           },
           "Modifiers": {
             "Items": [
@@ -88,9 +87,9 @@
             "Float64": 123.0
           },
           "Device": {
-            "Name": "7-SEGS",
-            "DisplayLedAddress": "7-SEGS",
-            "DisplayLedConnector": 2,
+            "Name": "LedModule",
+            "DisplayLedAddress": "LedModule",
+            "DisplayLedConnector": 1,
             "DisplayLedModuleSize": 8,
             "DisplayLedPadding": true,
             "DisplayLedPaddingChar": "0",
@@ -105,14 +104,14 @@
             "Type": "LedModule"
           },
           "DeviceType": "Display Module",
-          "DeviceName": "7-SEGS",
+          "DeviceName": "LedModule",
           "GUID": "f0d756a5-b25d-4a74-8363-0a06fc8ec138",
           "Active": true,
           "Name": "7-SEG NAV2",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           },
           "Modifiers": {
             "Items": [
@@ -138,9 +137,9 @@
             "Float64": 369.0
           },
           "Device": {
-            "Name": "7-SEGS",
-            "DisplayLedAddress": "7-SEGS",
-            "DisplayLedConnector": 3,
+            "Name": "LedModule",
+            "DisplayLedAddress": "LedModule",
+            "DisplayLedConnector": 2,
             "DisplayLedModuleSize": 8,
             "DisplayLedPadding": true,
             "DisplayLedPaddingChar": "0",
@@ -155,14 +154,14 @@
             "Type": "LedModule"
           },
           "DeviceType": "Display Module",
-          "DeviceName": "7-SEGS",
+          "DeviceName": "LedModule",
           "GUID": "32fb4a82-e5fc-4d1b-9bfb-7f270f056f27",
           "Active": true,
           "Name": "7-SEG NAV1",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           },
           "Modifiers": {
             "Items": [
@@ -201,8 +200,8 @@
           "Name": "ALT ARM LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
           },
           "Modifiers": {
             "Items": [
@@ -236,21 +235,21 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "VHF LED ALERT",
-            "Pin": "VHF LED ALERT",
+            "Name": "ALERT LED",
+            "Pin": "ALERT LED",
             "Brightness": 255,
             "PwmMode": false,
             "Type": "Output"
           },
           "DeviceType": "Output",
-          "DeviceName": "VHF LED ALERT",
+          "DeviceName": "ALERT LED",
           "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
           "Active": true,
           "Name": "VHF LED ALERT",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Modifiers": {
             "Items": [
@@ -284,8 +283,8 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "VHF LCD",
-            "Address": "VHF LCD",
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
             "Lines": [
               "NAV ACT: ###.###",
               "NAV STB: !!!.!!!"
@@ -293,14 +292,14 @@
             "Type": "LcdDisplay"
           },
           "DeviceType": "LcdDisplay",
-          "DeviceName": "VHF LCD",
+          "DeviceName": "LcdDisplay",
           "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
           "Active": true,
           "Name": "VHF LCD [NAV]",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -366,22 +365,22 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "VHF LCD",
-            "Address": "VHF LCD",
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
             "Lines": [
               ""
             ],
             "Type": "LcdDisplay"
           },
           "DeviceType": "LcdDisplay",
-          "DeviceName": "VHF LCD",
+          "DeviceName": "LcdDisplay",
           "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
           "Active": true,
           "Name": "VHF LCD [NAV] OFF",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -433,8 +432,8 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "VHF LCD",
-            "Address": "VHF LCD",
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
             "Lines": [
               "COM ACT: ###.###",
               "COM STB: !!!.!!!"
@@ -442,14 +441,14 @@
             "Type": "LcdDisplay"
           },
           "DeviceType": "LcdDisplay",
-          "DeviceName": "VHF LCD",
+          "DeviceName": "LcdDisplay",
           "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
           "Active": true,
           "Name": "VHF LCD [COM]",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -515,22 +514,22 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "VHF LCD",
-            "Address": "VHF LCD",
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
             "Lines": [
               ""
             ],
             "Type": "LcdDisplay"
           },
           "DeviceType": "LcdDisplay",
-          "DeviceName": "VHF LCD",
+          "DeviceName": "LcdDisplay",
           "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
           "Active": true,
           "Name": "VHF LCD [COM] OFF",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -595,8 +594,8 @@
           "Name": "GSL LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -643,8 +642,8 @@
           "Name": "ALT LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -691,8 +690,8 @@
           "Name": "VS LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -739,8 +738,8 @@
           "Name": "MACH LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -787,8 +786,8 @@
           "Name": "V NAV LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -835,8 +834,8 @@
           "Name": "IAS LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -883,8 +882,8 @@
           "Name": "V/L LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -931,8 +930,8 @@
           "Name": "B LOC LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -979,8 +978,8 @@
           "Name": "TURB LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -1027,8 +1026,8 @@
           "Name": "L NAV LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -1075,8 +1074,8 @@
           "Name": "HDG LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -1123,8 +1122,8 @@
           "Name": "AP LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           },
           "Modifiers": {
             "Items": [
@@ -1158,21 +1157,21 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "VHF LED HOLD",
-            "Pin": "VHF LED HOLD",
+            "Name": "HOLD LED",
+            "Pin": "HOLD LED",
             "Brightness": 255,
             "PwmMode": false,
             "Type": "Output"
           },
           "DeviceType": "Output",
-          "DeviceName": "VHF LED HOLD",
+          "DeviceName": "HOLD LED",
           "GUID": "f1eff4b4-9c37-4569-8c61-7d83d034a8d6",
           "Active": true,
           "Name": "VHF LED HOLD",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Modifiers": {
             "Items": [
@@ -1282,10 +1281,6 @@
           "Active": true,
           "Name": "[VHF NAV STB]",
           "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
-          },
           "Modifiers": {
             "Items": [
               {
@@ -1322,10 +1317,6 @@
           "Active": true,
           "Name": "[VHF COM ACT]",
           "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
-          },
           "Modifiers": {
             "Items": [
               {
@@ -1608,21 +1599,21 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "MWS RED LED",
-            "Pin": "MWS RED LED",
+            "Name": "ALARM LED",
+            "Pin": "ALARM LED",
             "Brightness": 255,
             "PwmMode": false,
             "Type": "Output"
           },
           "DeviceType": "Output",
-          "DeviceName": "MWS RED LED",
+          "DeviceName": "ALARM LED",
           "GUID": "d8105d69-5898-40f7-b74b-91a4980cc2b0",
           "Active": true,
           "Name": "MWS RED LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Modifiers": {
             "Items": [
@@ -1656,21 +1647,21 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "MWS AMBER LED",
-            "Pin": "MWS AMBER LED",
+            "Name": "CAUTION LED",
+            "Pin": "CAUTION LED",
             "Brightness": 255,
             "PwmMode": false,
             "Type": "Output"
           },
           "DeviceType": "Output",
-          "DeviceName": "MWS AMBER LED",
+          "DeviceName": "CAUTION LED",
           "GUID": "91d8e839-8c6a-4675-b802-188a1518a208",
           "Active": true,
           "Name": "MWS AMBER LED",
           "Type": "OutputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Modifiers": {
             "Items": [
@@ -1739,15 +1730,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF SWAP BTN"
+            "Name": "4067 Multiplexer:15"
           },
           "GUID": "64e3085b-016b-4b6f-96cb-1a4caf395da5",
           "Active": true,
           "Name": "VHF SWAP BTN [NAV]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1763,7 +1754,7 @@
         {
           "button": {
             "onPress": {
-              "Command": "(L:PED_FWD_L_VHF_Tfr) ! (>L:PED_FWD_L_VHF_Tfr)",
+              "Command": "(>K:COM_STBY_RADIO_SWAP)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             },
@@ -1773,15 +1764,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF SWAP BTN"
+            "Name": "4067 Multiplexer:15"
           },
           "GUID": "b54abc14-f575-4039-8707-7c4fead47cb6",
           "Active": true,
           "Name": "VHF SWAP BTN [COM]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1807,15 +1798,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF ENC BTN"
+            "Name": "4067 Multiplexer:14"
           },
           "GUID": "88e54ae2-5a67-4c32-935a-d697e2744743",
           "Active": true,
           "Name": "VHF ENC PWR BTN [NAV]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1841,15 +1832,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF ENC BTN"
+            "Name": "4067 Multiplexer:14"
           },
           "GUID": "ece1b313-2d58-4c49-8aa6-420be5c66c9b",
           "Active": true,
           "Name": "VHF ENC PWR BTN [COM]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1865,27 +1856,27 @@
         {
           "encoder": {
             "onLeft": {
-              "Command": "(>K:NAV1_RADIO_FRACT_DEC)",
-              "PresetId": "f92f319c-75e2-471e-845a-764540c65040",
+              "Command": "(>K:NAV1_RADIO_FRACT_INC)",
+              "PresetId": "91d424e5-4d6a-48a0-a435-153331c604b3",
               "Type": "MSFS2020CustomInputAction"
             },
             "onRight": {
-              "Command": "(>K:NAV1_RADIO_FRACT_INC)",
-              "PresetId": "91d424e5-4d6a-48a0-a435-153331c604b3",
+              "Command": "(>K:NAV1_RADIO_FRACT_DEC)",
+              "PresetId": "f92f319c-75e2-471e-845a-764540c65040",
               "Type": "MSFS2020CustomInputAction"
             }
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "VHF ENC IN"
+            "Name": "Encoder 1"
           },
           "GUID": "88ded3c6-2865-4fc1-ad26-364dd5ac1288",
           "Active": true,
           "Name": "VHF ENC IN [NAV]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1901,27 +1892,27 @@
         {
           "encoder": {
             "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Stby_inner) -- (>L:PED_FWD_L_VHF_Stby_inner)",
+              "Command": "(>K:COM_RADIO_FRACT_INC)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             },
             "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Stby_inner) ++ (>L:PED_FWD_L_VHF_Stby_inner)",
+              "Command": "(>K:COM_RADIO_FRACT_DEC)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             }
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "VHF ENC IN"
+            "Name": "Encoder 1"
           },
           "GUID": "3f9bd397-07cf-47a3-b2dd-b487757fcebb",
           "Active": true,
-          "Name": "VHF ENC IN [COM] COM1 ACT",
+          "Name": "VHF ENC IN [COM]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1931,41 +1922,33 @@
               "Value": "1",
               "Logic": "and",
               "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
             }
           ]
         },
         {
           "encoder": {
             "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Stby_outer) -- (>L:PED_FWD_L_VHF_Stby_outer)",
+              "Command": "(>K:COM_RADIO_WHOLE_DEC)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             },
             "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Stby_outer) ++ (>L:PED_FWD_L_VHF_Stby_outer)",
+              "Command": "(>K:COM_RADIO_WHOLE_INC)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             }
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "VHF ENC OUT"
+            "Name": "Encoder"
           },
           "GUID": "fdd193c7-bbf7-4d0d-bf8b-5231c0156d2e",
           "Active": true,
-          "Name": "VHF ENC OUT [COM] COM1 ACT",
+          "Name": "VHF ENC OUT [COM]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -1975,41 +1958,33 @@
               "Value": "1",
               "Logic": "and",
               "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
             }
           ]
         },
         {
           "encoder": {
             "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Act_inner) -- (>L:PED_FWD_L_VHF_Act_inner)",
+              "Command": "(L:PED_FWD_L_VHF_Act_inner) ++ (>L:PED_FWD_L_VHF_Act_inner)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             },
             "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Act_inner) ++ (>L:PED_FWD_L_VHF_Act_inner)",
+              "Command": "(L:PED_FWD_L_VHF_Act_inner) -- (>L:PED_FWD_L_VHF_Act_inner)",
               "PresetId": "0",
               "Type": "MSFS2020CustomInputAction"
             }
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "VHF ENC IN"
+            "Name": "Encoder 1"
           },
           "GUID": "779f1e4e-9135-46ba-962a-36e8e9f3b668",
-          "Active": true,
+          "Active": false,
           "Name": "VHF ENC IN [COM] COM2 ACT",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -2045,15 +2020,15 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "VHF ENC OUT"
+            "Name": "Encoder"
           },
           "GUID": "436edf19-d068-40e4-86f1-0b39b782c69a",
-          "Active": true,
+          "Active": false,
           "Name": "VHF ENC OUT [COM] COM2 ACT",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -2089,15 +2064,15 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "VHF ENC OUT"
+            "Name": "Encoder"
           },
           "GUID": "56052c5a-8c09-4dc3-8571-f63500283e78",
           "Active": true,
           "Name": "VHF ENC OUT [NAV]",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           },
           "Preconditions": [
             {
@@ -2118,15 +2093,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "ALT SEL BTN UNUSE"
+            "Name": "ALT SEL ENC BTN"
           },
           "GUID": "57a90fd0-a38b-43b2-9bad-d7703181884e",
           "Active": false,
           "Name": "ALT SEL BTN UNUSE",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
           }
         },
         {
@@ -2151,8 +2126,8 @@
           "Name": "ALT SEL ENC",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
           }
         },
         {
@@ -2175,8 +2150,8 @@
           "Name": "ALT ARM BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
           }
         },
         {
@@ -2199,8 +2174,8 @@
           "Name": "GSL BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2223,8 +2198,8 @@
           "Name": "ALT BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2247,8 +2222,8 @@
           "Name": "VS BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2271,8 +2246,8 @@
           "Name": "MACH BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2295,8 +2270,8 @@
           "Name": "V NAV BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2319,8 +2294,8 @@
           "Name": "IAS BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2343,8 +2318,8 @@
           "Name": "V/L BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2367,8 +2342,8 @@
           "Name": "B LOC BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2394,8 +2369,8 @@
           "Name": "TURB BTN (SYNC)",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2418,8 +2393,8 @@
           "Name": "L NAV BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2442,8 +2417,8 @@
           "Name": "HDG BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2466,8 +2441,8 @@
           "Name": "AP BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
           }
         },
         {
@@ -2502,8 +2477,8 @@
           "Name": "HDG ENC",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2514,15 +2489,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "HDG ENC BTN"
+            "Name": "HDG BTN"
           },
           "GUID": "175628c4-6dc2-45e3-b56b-c596fae70a74",
           "Active": false,
           "Name": "HDG ENC BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2538,15 +2513,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "NAV SEL NAV1"
+            "Name": "NAV1 SELECT"
           },
           "GUID": "3467273c-5e09-44c5-a692-6fe61c499a1d",
           "Active": true,
           "Name": "NAV SEL NAV1",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2562,15 +2537,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "NAV SEL SPLIT"
+            "Name": "NAV SPLIT SELECT"
           },
           "GUID": "422215a4-a303-4d1c-ba60-ca9c6aa17d8c",
           "Active": true,
           "Name": "NAV SEL SPLIT",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2586,15 +2561,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "NAV SEL NAV2"
+            "Name": "NAV2 SELECT"
           },
           "GUID": "eb376968-fa2f-4c67-b997-f1b63c64a15c",
           "Active": true,
           "Name": "NAV SEL NAV2",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2612,15 +2587,15 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "NAV1 CRS ENC"
+            "Name": "NAV1 ENC"
           },
           "GUID": "ef1fdc8c-8986-4309-bd91-d1681deadf78",
           "Active": true,
           "Name": "NAV1 CRS ENC",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2631,15 +2606,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "NAV1 CRS BTN"
+            "Name": "NAV1 BTN"
           },
           "GUID": "2e2e2053-6d03-4f24-aa36-c2da838a3c2d",
           "Active": false,
           "Name": "NAV1 CRS BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2650,15 +2625,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "NAV2 CRS BTN"
+            "Name": "NAV2 BTN"
           },
           "GUID": "b31d1804-8090-4a75-a8c9-c41986fe303d",
           "Active": false,
           "Name": "NAV2 CRS BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2676,15 +2651,15 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "NAV2 CRS ENC"
+            "Name": "NAV2  ENC"
           },
           "GUID": "0a039472-becd-446e-b4c3-6df82a163331",
           "Active": true,
           "Name": "NAV2 CRS ENC",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
           }
         },
         {
@@ -2700,15 +2675,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF NAV ON"
+            "Name": "4067 Multiplexer:12"
           },
           "GUID": "06366c86-70c5-4293-a8e9-df2d515adb74",
           "Active": true,
           "Name": "VHF NAV ON",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2724,15 +2699,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF NAV ORIDE"
+            "Name": "4067 Multiplexer:8"
           },
           "GUID": "4de0d617-3177-4ec3-b6a4-f0afd052cd6b",
           "Active": true,
           "Name": "VHF NAV ORIDE",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2748,15 +2723,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF NAV OFF"
+            "Name": "4067 Multiplexer:11"
           },
           "GUID": "592ce5f7-d874-43f9-911d-ae9d2855e9df",
           "Active": true,
           "Name": "VHF NAV OFF",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2772,15 +2747,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF NAV STBY"
+            "Name": "4067 Multiplexer:9"
           },
           "GUID": "53a238d5-638f-4c9b-a23b-7fffa7ebfe5e",
           "Active": true,
           "Name": "VHF NAV STBY",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2796,15 +2771,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF NAV HOLD"
+            "Name": "4067 Multiplexer:10"
           },
           "GUID": "83475880-b126-4047-8592-3e5a35a84317",
           "Active": true,
           "Name": "VHF NAV HOLD",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2831,15 +2806,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "VHF MODE SWTCH"
+            "Name": "4067 Multiplexer:13"
           },
           "GUID": "20a2a8b5-37de-42a7-bae0-ea610de40d7c",
           "Active": true,
           "Name": "VHF MODE SWTCH",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2884,15 +2859,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "FD BARS"
+            "Name": "4067 Multiplexer:5"
           },
           "GUID": "cb020277-70f2-4d57-b4bb-2bb0a1af63bd",
           "Active": true,
           "Name": "FD BARS",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2913,15 +2888,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "FD BARS"
+            "Name": "4067 Multiplexer:5"
           },
           "GUID": "d0ecf1f0-aa0e-447c-8127-5d6930301ab3",
           "Active": false,
           "Name": "HSI Mode",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2937,15 +2912,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "MWS RED BTN"
+            "Name": "4067 Multiplexer:7"
           },
           "GUID": "4b4e7158-85bc-44a8-8aca-ba62b3b08c70",
           "Active": true,
           "Name": "MWS RED BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         },
         {
@@ -2961,15 +2936,15 @@
           },
           "Device": {
             "Type": "Button",
-            "Name": "MWS AMBER BTN"
+            "Name": "4067 Multiplexer:6"
           },
           "GUID": "4099ed0e-c82a-4971-a735-a870cee11e42",
           "Active": true,
           "Name": "MWS AMBER BTN",
           "Type": "InputConfigItem",
           "Controller": {
-            "Name": "Controls",
-            "Serial": "SN-850-5fd"
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
           }
         }
       ]
