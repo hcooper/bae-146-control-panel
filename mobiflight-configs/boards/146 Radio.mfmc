@@ -9,8 +9,8 @@
   </InputMultiplexer>
   <Output Name="HOLD LED" Pin="7" />
   <Output Name="ALERT LED" Pin="6" />
-  <Output Name="CAUTION LED" Pin="5" />
-  <Output Name="ALARM LED" Pin="4" />
-  <Encoder Name="Encoder" PinLeft="8" PinRight="9" EncoderType="2" />
-  <Encoder Name="Encoder 1" PinLeft="14" PinRight="16" EncoderType="2" />
+  <Output Name="MWS AMBER LED" Pin="5" />
+  <Output Name="MWS RED LED" Pin="4" />
+  <Encoder Name="OUTER ENC" PinLeft="8" PinRight="9" EncoderType="2" />
+  <Encoder Name="INNER ENC" PinLeft="14" PinRight="16" EncoderType="2" />
 </Config>

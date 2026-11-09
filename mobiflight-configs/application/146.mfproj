@@ -1489,7 +1489,7 @@
           "DeviceName": "ALERT LED",
           "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
           "Active": true,
-          "Name": "VHF LED ALERT",
+          "Name": "NAV ALERT LED",
           "Type": "OutputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -1539,7 +1539,7 @@
           "DeviceName": "LcdDisplay",
           "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
           "Active": true,
-          "Name": "VHF LCD [NAV]",
+          "Name": "NAV MODE LCD",
           "Type": "OutputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -1620,7 +1620,7 @@
           "DeviceName": "LcdDisplay",
           "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
           "Active": true,
-          "Name": "VHF LCD [NAV] OFF",
+          "Name": "NAV MODE LCD BLANK",
           "Type": "OutputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -1688,7 +1688,7 @@
           "DeviceName": "LcdDisplay",
           "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
           "Active": true,
-          "Name": "VHF LCD [COM]",
+          "Name": "COM MODE LCD",
           "Type": "OutputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -1769,7 +1769,7 @@
           "DeviceName": "LcdDisplay",
           "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
           "Active": true,
-          "Name": "VHF LCD [COM] OFF",
+          "Name": "COM MODE LCD BLANK",
           "Type": "OutputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -1835,7 +1835,7 @@
           "DeviceName": "HOLD LED",
           "GUID": "f1eff4b4-9c37-4569-8c61-7d83d034a8d6",
           "Active": true,
-          "Name": "VHF LED HOLD",
+          "Name": "NAV HOLD LED",
           "Type": "OutputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -1863,7 +1863,7 @@
           "Source": {
             "MobiFlightVariable": {
               "TYPE": "number",
-              "Name": "VHF MODE",
+              "Name": "PANEL MODE",
               "Expression": "$"
             },
             "Type": "VariableSource"
@@ -1875,7 +1875,7 @@
           "DeviceType": "",
           "GUID": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
           "Active": true,
-          "Name": "[VHF MODE]",
+          "Name": "[PANEL MODE]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -1911,7 +1911,7 @@
           "DeviceType": "",
           "GUID": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
           "Active": true,
-          "Name": "[VHF NAV ACT]",
+          "Name": "[NAV ACT FREQ]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -1947,7 +1947,7 @@
           "DeviceType": "",
           "GUID": "27bc3754-81e3-4cb7-8013-57a068882baf",
           "Active": true,
-          "Name": "[VHF NAV STB]",
+          "Name": "[NAV STB FREQ]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -1983,7 +1983,7 @@
           "DeviceType": "",
           "GUID": "d5978e55-5064-41eb-b20d-c683236abade",
           "Active": true,
-          "Name": "[VHF COM ACT]",
+          "Name": "[COM ACT FREQ]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2055,7 +2055,7 @@
           "DeviceType": "",
           "GUID": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
           "Active": true,
-          "Name": "[VHF COM STB]",
+          "Name": "[COM STB FREQ]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2091,7 +2091,7 @@
           "DeviceType": "",
           "GUID": "dd36708b-d62a-4510-b2a9-98f132902e0b",
           "Active": true,
-          "Name": "[VHF NAV LCD ON]",
+          "Name": "[NAV PWR]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2127,7 +2127,7 @@
           "DeviceType": "",
           "GUID": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
           "Active": true,
-          "Name": "[VHF NAV COM ON]",
+          "Name": "[COM PWR]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2163,7 +2163,7 @@
           "DeviceType": "",
           "GUID": "2b7d10f2-91c0-4b2b-9c08-02545538b088",
           "Active": true,
-          "Name": "(L:L_VHFNAV_mode)",
+          "Name": "[NAV FUNC]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2199,7 +2199,7 @@
           "DeviceType": "",
           "GUID": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
           "Active": true,
-          "Name": "(L:PED_FWD_L_VHF_Tfr)",
+          "Name": "[COM XFR]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2233,14 +2233,14 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "ALARM LED",
-            "Pin": "ALARM LED",
+            "Name": "MWS RED LED",
+            "Pin": "MWS RED LED",
             "Brightness": 255,
             "PwmMode": false,
             "Type": "Output"
           },
           "DeviceType": "Output",
-          "DeviceName": "ALARM LED",
+          "DeviceName": "MWS RED LED",
           "GUID": "d8105d69-5898-40f7-b74b-91a4980cc2b0",
           "Active": true,
           "Name": "MWS RED LED",
@@ -2281,14 +2281,14 @@
             "Float64": 1.0
           },
           "Device": {
-            "Name": "CAUTION LED",
-            "Pin": "CAUTION LED",
+            "Name": "MWS AMBER LED",
+            "Pin": "MWS AMBER LED",
             "Brightness": 255,
             "PwmMode": false,
             "Type": "Output"
           },
           "DeviceType": "Output",
-          "DeviceName": "CAUTION LED",
+          "DeviceName": "MWS AMBER LED",
           "GUID": "91d8e839-8c6a-4675-b802-188a1518a208",
           "Active": true,
           "Name": "MWS AMBER LED",
@@ -2332,7 +2332,7 @@
           },
           "GUID": "64e3085b-016b-4b6f-96cb-1a4caf395da5",
           "Active": true,
-          "Name": "VHF SWAP BTN [NAV]",
+          "Name": "NAV MODE SWAP",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2366,7 +2366,7 @@
           },
           "GUID": "b54abc14-f575-4039-8707-7c4fead47cb6",
           "Active": true,
-          "Name": "VHF SWAP BTN [COM]",
+          "Name": "COM MODE SWAP",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2400,7 +2400,7 @@
           },
           "GUID": "88e54ae2-5a67-4c32-935a-d697e2744743",
           "Active": true,
-          "Name": "VHF ENC PWR BTN [NAV]",
+          "Name": "NAV MODE KNOB PUSH (PWR)",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2434,7 +2434,7 @@
           },
           "GUID": "ece1b313-2d58-4c49-8aa6-420be5c66c9b",
           "Active": true,
-          "Name": "VHF ENC PWR BTN [COM]",
+          "Name": "COM MODE KNOB PUSH (PWR)",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2466,11 +2466,11 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "Encoder 1"
+            "Name": "INNER ENC"
           },
           "GUID": "88ded3c6-2865-4fc1-ad26-364dd5ac1288",
           "Active": true,
-          "Name": "VHF ENC IN [NAV]",
+          "Name": "NAV MODE INNER KNOB",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2502,11 +2502,11 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "Encoder 1"
+            "Name": "INNER ENC"
           },
           "GUID": "3f9bd397-07cf-47a3-b2dd-b487757fcebb",
           "Active": true,
-          "Name": "VHF ENC IN [COM]",
+          "Name": "COM MODE INNER KNOB",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2538,11 +2538,11 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "Encoder"
+            "Name": "OUTER ENC"
           },
           "GUID": "fdd193c7-bbf7-4d0d-bf8b-5231c0156d2e",
           "Active": true,
-          "Name": "VHF ENC OUT [COM]",
+          "Name": "COM MODE OUTER KNOB",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2574,7 +2574,7 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "Encoder 1"
+            "Name": "INNER ENC"
           },
           "GUID": "779f1e4e-9135-46ba-962a-36e8e9f3b668",
           "Active": false,
@@ -2618,7 +2618,7 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "Encoder"
+            "Name": "OUTER ENC"
           },
           "GUID": "436edf19-d068-40e4-86f1-0b39b782c69a",
           "Active": false,
@@ -2662,11 +2662,11 @@
           },
           "Device": {
             "Type": "Encoder",
-            "Name": "Encoder"
+            "Name": "OUTER ENC"
           },
           "GUID": "56052c5a-8c09-4dc3-8571-f63500283e78",
           "Active": true,
-          "Name": "VHF ENC OUT [NAV]",
+          "Name": "NAV MODE OUTER KNOB",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2700,7 +2700,7 @@
           },
           "GUID": "06366c86-70c5-4293-a8e9-df2d515adb74",
           "Active": true,
-          "Name": "VHF NAV ON",
+          "Name": "NAV FUNC ON",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2724,7 +2724,7 @@
           },
           "GUID": "4de0d617-3177-4ec3-b6a4-f0afd052cd6b",
           "Active": true,
-          "Name": "VHF NAV ORIDE",
+          "Name": "NAV FUNC ORIDE",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2748,7 +2748,7 @@
           },
           "GUID": "592ce5f7-d874-43f9-911d-ae9d2855e9df",
           "Active": true,
-          "Name": "VHF NAV OFF",
+          "Name": "NAV FUNC OFF",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2772,7 +2772,7 @@
           },
           "GUID": "53a238d5-638f-4c9b-a23b-7fffa7ebfe5e",
           "Active": true,
-          "Name": "VHF NAV STBY",
+          "Name": "NAV FUNC STBY",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2796,7 +2796,7 @@
           },
           "GUID": "83475880-b126-4047-8592-3e5a35a84317",
           "Active": true,
-          "Name": "VHF NAV HOLD",
+          "Name": "NAV FUNC HOLD",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
@@ -2808,7 +2808,7 @@
             "onPress": {
               "Variable": {
                 "TYPE": "number",
-                "Name": "VHF MODE",
+                "Name": "PANEL MODE",
                 "Expression": "0"
               },
               "Type": "VariableInputAction"
@@ -2816,7 +2816,7 @@
             "onRelease": {
               "Variable": {
                 "TYPE": "number",
-                "Name": "VHF MODE",
+                "Name": "PANEL MODE",
                 "Expression": "1"
               },
               "Type": "VariableInputAction"
@@ -2831,7 +2831,7 @@
           },
           "GUID": "20a2a8b5-37de-42a7-bae0-ea610de40d7c",
           "Active": true,
-          "Name": "VHF MODE SWTCH",
+          "Name": "PANEL MODE SW (NAV/COM)",
           "Type": "InputConfigItem",
           "Controller": {
             "Name": "146 Radio",
