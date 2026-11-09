@@ -1,572 +1,11 @@
 {
-  "Name": "146-migrated",
+  "Name": "146",
   "ConfigFiles": [
     {
-      "Label": "146-migrated",
+      "Label": "🧑‍✈️ Autopilot",
       "ReferenceOnly": false,
       "EmbedContent": true,
       "ConfigItems": [
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "a5bc5738-db9c-4569-b4e1-88bd8a6fa14b",
-              "Value": "(L:MCP_Alt_dig1, number) 10000 * (L:MCP_Alt_dig2, number) 1000 * + (L:MCP_Alt_dig3, number) 100 * +",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 12345.0
-          },
-          "Device": {
-            "Name": "7 SEG",
-            "DisplayLedAddress": "7 SEG",
-            "DisplayLedConnector": 1,
-            "DisplayLedModuleSize": 8,
-            "DisplayLedPadding": true,
-            "DisplayLedPaddingChar": "0",
-            "DisplayLedDigits": [
-              "3",
-              "4",
-              "5",
-              "6",
-              "7"
-            ],
-            "DisplayLedDecimalPoints": [],
-            "DisplayLedReverseDigits": true,
-            "DisplayLedBrightnessReference": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
-            "Type": "LedModule"
-          },
-          "DeviceType": "Display Module",
-          "DeviceName": "7 SEG",
-          "GUID": "74ff3fb5-8147-4be4-93ba-d8badb0421dd",
-          "Active": true,
-          "Name": "7-SEG ALT SEL",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Altitude",
-            "Serial": "SN-BG4-F0E"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "Round($ / 100, 0) * 100",
-                "Active": true
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              },
-              {
-                "Type": "Padding",
-                "Character": "0",
-                "Length": 5,
-                "Direction": "Left",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "b6b20f0b-411d-422b-b75b-c0ca60302647",
-              "Value": "(L:MCP_NAV2_dig1, number) 100 * (L:MCP_NAV2_dig2, number) 10 * + (L:MCP_NAV2_dig3, number) +",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 123.0
-          },
-          "Device": {
-            "Name": "LedModule",
-            "DisplayLedAddress": "LedModule",
-            "DisplayLedConnector": 1,
-            "DisplayLedModuleSize": 8,
-            "DisplayLedPadding": true,
-            "DisplayLedPaddingChar": "0",
-            "DisplayLedDigits": [
-              "5",
-              "6",
-              "7"
-            ],
-            "DisplayLedDecimalPoints": [],
-            "DisplayLedReverseDigits": true,
-            "DisplayLedBrightnessReference": "",
-            "Type": "LedModule"
-          },
-          "DeviceType": "Display Module",
-          "DeviceName": "LedModule",
-          "GUID": "f0d756a5-b25d-4a74-8363-0a06fc8ec138",
-          "Active": true,
-          "Name": "7-SEG NAV2",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "Round($ / 1, 0) * 1",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "a731287c-911f-432c-a831-64f2d1becaec",
-              "Value": "(L:MCP_NAV1_dig1, number) 100 * (L:MCP_NAV1_dig2, number) 10 * + (L:MCP_NAV1_dig3, number) +",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 369.0
-          },
-          "Device": {
-            "Name": "LedModule",
-            "DisplayLedAddress": "LedModule",
-            "DisplayLedConnector": 2,
-            "DisplayLedModuleSize": 8,
-            "DisplayLedPadding": true,
-            "DisplayLedPaddingChar": "0",
-            "DisplayLedDigits": [
-              "5",
-              "6",
-              "7"
-            ],
-            "DisplayLedDecimalPoints": [],
-            "DisplayLedReverseDigits": true,
-            "DisplayLedBrightnessReference": "",
-            "Type": "LedModule"
-          },
-          "DeviceType": "Display Module",
-          "DeviceName": "LedModule",
-          "GUID": "32fb4a82-e5fc-4d1b-9bfb-7f270f056f27",
-          "Active": true,
-          "Name": "7-SEG NAV1",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "Round($ / 1, 0) * 1",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "e99506f5-5243-455d-9a01-844d238d6f64",
-              "Value": "(L:MCP_Alt_arm_iL, bool) if{ 1 } els{ 0 }",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "ALT ARM LED",
-            "Pin": "ALT ARM LED",
-            "Brightness": 255,
-            "PwmMode": false,
-            "Type": "Output"
-          },
-          "DeviceType": "Output",
-          "DeviceName": "ALT ARM LED",
-          "GUID": "1a6f2e51-2869-4ca2-858e-c3a7ceb7f897",
-          "Active": true,
-          "Name": "ALT ARM LED",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Altitude",
-            "Serial": "SN-BG4-F0E"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "0",
-              "Value": "(L:L_VHFNAV_Alert_il)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "ALERT LED",
-            "Pin": "ALERT LED",
-            "Brightness": 255,
-            "PwmMode": false,
-            "Type": "Output"
-          },
-          "DeviceType": "Output",
-          "DeviceName": "ALERT LED",
-          "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
-          "Active": true,
-          "Name": "VHF LED ALERT",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF NAV 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              "NAV ACT: ###.###",
-              "NAV STB: !!!.!!!"
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
-          "Active": true,
-          "Name": "VHF LCD [NAV]",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          },
-          "ConfigRefs": [
-            {
-              "Active": true,
-              "Ref": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
-              "Placeholder": "#",
-              "TestValue": "1"
-            },
-            {
-              "Active": true,
-              "Ref": "27bc3754-81e3-4cb7-8013-57a068882baf",
-              "Placeholder": "!",
-              "TestValue": "1"
-            }
-          ]
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              ""
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
-          "Active": true,
-          "Name": "VHF LCD [NAV] OFF",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF COM 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              "COM ACT: ###.###",
-              "COM STB: !!!.!!!"
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
-          "Active": true,
-          "Name": "VHF LCD [COM]",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          },
-          "ConfigRefs": [
-            {
-              "Active": true,
-              "Ref": "d5978e55-5064-41eb-b20d-c683236abade",
-              "Placeholder": "#",
-              "TestValue": "1"
-            },
-            {
-              "Active": true,
-              "Ref": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
-              "Placeholder": "!",
-              "TestValue": "1"
-            }
-          ]
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF COM 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              ""
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
-          "Active": true,
-          "Name": "VHF LCD [COM] OFF",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          }
-        },
         {
           "Source": {
             "SimConnectValue": {
@@ -1144,6 +583,1235 @@
           }
         },
         {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_GSL)",
+              "PresetId": "ed0d20f7-a7fc-4419-bc3f-2a4c17ae6b4d",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "GSL BTN"
+          },
+          "GUID": "50d213ee-9a61-4dec-a202-7b8dbf125559",
+          "Active": true,
+          "Name": "GSL BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_ALT)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "ALT BTN"
+          },
+          "GUID": "551da61b-ca8c-4710-bb14-e30c56759a15",
+          "Active": true,
+          "Name": "ALT BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_VS)",
+              "PresetId": "a5936429-32a8-430d-95eb-3e18e90b55d1",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "VS BTN"
+          },
+          "GUID": "d379b493-2b13-4d02-a41f-ff08ace65619",
+          "Active": true,
+          "Name": "VS BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_MACH)",
+              "PresetId": "dfeaffa7-de8f-492b-86be-9858e1567358",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "MACH BTN"
+          },
+          "GUID": "fe02cf9d-2810-4576-953d-a0e4a5d0c03e",
+          "Active": true,
+          "Name": "MACH BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_VNAV)",
+              "PresetId": "4f107c62-585a-41ac-8d21-f56e62e9bd9a",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "V NAV BTN"
+          },
+          "GUID": "5d07411c-0525-4a01-ad5f-20d4d1823fa4",
+          "Active": true,
+          "Name": "V NAV BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_IAS)",
+              "PresetId": "e26021f4-a69f-46a0-a8d0-3a47055e470a",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "IAS BTN"
+          },
+          "GUID": "2cb498f9-824a-4389-aa7a-0426c2268f69",
+          "Active": true,
+          "Name": "IAS BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_VL)",
+              "PresetId": "d09fb2c4-7af8-4b9a-8e01-003b15c250e0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "V/L BTN"
+          },
+          "GUID": "1336a82f-be15-457c-9909-0859758c8f43",
+          "Active": true,
+          "Name": "V/L BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_BLOC)",
+              "PresetId": "faa6bd1e-715d-4606-ac7d-c7d8e5d23861",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "B LOC BTN"
+          },
+          "GUID": "91edd146-aa1a-438c-b9d9-e1a387dd3ea2",
+          "Active": true,
+          "Name": "B LOC BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_TURB)",
+              "PresetId": "a1fed136-cfdd-4d63-b2be-1b72695e07ae",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRelease": {
+              "Type": "RetriggerInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "TURB BTN"
+          },
+          "GUID": "743c500f-7665-4623-9bf0-106d37e4750d",
+          "Active": true,
+          "Name": "TURB BTN (SYNC)",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_LNAV)",
+              "PresetId": "bd964c25-e45c-488c-86f1-75ded1545a99",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "L NAV BTN"
+          },
+          "GUID": "4010fb94-687f-4968-a2c1-a461300f07a9",
+          "Active": true,
+          "Name": "L NAV BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_Mode_HDG)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "HDG BTN"
+          },
+          "GUID": "964e0b5e-cfed-4289-a409-33d3096298c0",
+          "Active": true,
+          "Name": "HDG BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "(>K:AP_MASTER)",
+              "PresetId": "b17146c8-2db3-4239-b797-e7bc11d557da",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "AP BTN"
+          },
+          "GUID": "4fb7135b-debb-4771-954d-d8f55bcba7c7",
+          "Active": true,
+          "Name": "AP BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Autopilot",
+            "Serial": "SN-D8F-39D"
+          }
+        }
+      ]
+    },
+    {
+      "Label": "🧭 Heading",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "b6b20f0b-411d-422b-b75b-c0ca60302647",
+              "Value": "(L:MCP_NAV2_dig1, number) 100 * (L:MCP_NAV2_dig2, number) 10 * + (L:MCP_NAV2_dig3, number) +",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 123.0
+          },
+          "Device": {
+            "Name": "LedModule",
+            "DisplayLedAddress": "LedModule",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": true,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "LedModule",
+          "GUID": "f0d756a5-b25d-4a74-8363-0a06fc8ec138",
+          "Active": true,
+          "Name": "7-SEG NAV2",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($ / 1, 0) * 1",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "a731287c-911f-432c-a831-64f2d1becaec",
+              "Value": "(L:MCP_NAV1_dig1, number) 100 * (L:MCP_NAV1_dig2, number) 10 * + (L:MCP_NAV1_dig3, number) +",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 369.0
+          },
+          "Device": {
+            "Name": "LedModule",
+            "DisplayLedAddress": "LedModule",
+            "DisplayLedConnector": 2,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": true,
+            "DisplayLedBrightnessReference": "",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "LedModule",
+          "GUID": "32fb4a82-e5fc-4d1b-9bfb-7f270f056f27",
+          "Active": true,
+          "Name": "7-SEG NAV1",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($ / 1, 0) * 1",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(L:MCP_HDG_sel) -- (>L:MCP_HDG_sel)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onLeftFast": {
+              "Command": "(L:MCP_HDG_sel) 10 - (>L:MCP_HDG_sel)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(L:MCP_HDG_sel) ++ (>L:MCP_HDG_sel)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRightFast": {
+              "Command": "(L:MCP_HDG_sel) 10 + (>L:MCP_HDG_sel)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "HDG ENC"
+          },
+          "GUID": "1beede9f-037b-4068-8517-528262b89026",
+          "Active": true,
+          "Name": "HDG ENC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "button": {
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "HDG BTN"
+          },
+          "GUID": "175628c4-6dc2-45e3-b56b-c596fae70a74",
+          "Active": false,
+          "Name": "HDG ENC BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "0 (>L:MCP_NAV_split)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "NAV1 SELECT"
+          },
+          "GUID": "3467273c-5e09-44c5-a692-6fe61c499a1d",
+          "Active": true,
+          "Name": "NAV SEL NAV1",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_NAV_split)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "NAV SPLIT SELECT"
+          },
+          "GUID": "422215a4-a303-4d1c-ba60-ca9c6aa17d8c",
+          "Active": true,
+          "Name": "NAV SEL SPLIT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "2 (>L:MCP_NAV_split)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "NAV2 SELECT"
+          },
+          "GUID": "eb376968-fa2f-4c67-b997-f1b63c64a15c",
+          "Active": true,
+          "Name": "NAV SEL NAV2",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(L:MCP_NAV1_sel, number) -- (>L:MCP_NAV1_sel)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(L:MCP_NAV1_sel, number) ++ (>L:MCP_NAV1_sel)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "NAV1 ENC"
+          },
+          "GUID": "ef1fdc8c-8986-4309-bd91-d1681deadf78",
+          "Active": true,
+          "Name": "NAV1 CRS ENC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "button": {
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "NAV1 BTN"
+          },
+          "GUID": "2e2e2053-6d03-4f24-aa36-c2da838a3c2d",
+          "Active": false,
+          "Name": "NAV1 CRS BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "button": {
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "NAV2 BTN"
+          },
+          "GUID": "b31d1804-8090-4a75-a8c9-c41986fe303d",
+          "Active": false,
+          "Name": "NAV2 CRS BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(L:MCP_NAV2_sel, number) 1 - (>L:MCP_NAV2_sel)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(L:MCP_NAV2_sel, number) 1 + (>L:MCP_NAV2_sel)",
+              "PresetId": "-",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "NAV2  ENC"
+          },
+          "GUID": "0a039472-becd-446e-b4c3-6df82a163331",
+          "Active": true,
+          "Name": "NAV2 CRS ENC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Heading",
+            "Serial": "SN-51F-31B"
+          }
+        }
+      ]
+    },
+    {
+      "Label": "⛰️ Altitude",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "a5bc5738-db9c-4569-b4e1-88bd8a6fa14b",
+              "Value": "(L:MCP_Alt_dig1, number) 10000 * (L:MCP_Alt_dig2, number) 1000 * + (L:MCP_Alt_dig3, number) 100 * +",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 12345.0
+          },
+          "Device": {
+            "Name": "7 SEG",
+            "DisplayLedAddress": "7 SEG",
+            "DisplayLedConnector": 1,
+            "DisplayLedModuleSize": 8,
+            "DisplayLedPadding": true,
+            "DisplayLedPaddingChar": "0",
+            "DisplayLedDigits": [
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "DisplayLedDecimalPoints": [],
+            "DisplayLedReverseDigits": true,
+            "DisplayLedBrightnessReference": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
+            "Type": "LedModule"
+          },
+          "DeviceType": "Display Module",
+          "DeviceName": "7 SEG",
+          "GUID": "74ff3fb5-8147-4be4-93ba-d8badb0421dd",
+          "Active": true,
+          "Name": "7-SEG ALT SEL",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($ / 100, 0) * 100",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              },
+              {
+                "Type": "Padding",
+                "Character": "0",
+                "Length": 5,
+                "Direction": "Left",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "e99506f5-5243-455d-9a01-844d238d6f64",
+              "Value": "(L:MCP_Alt_arm_iL, bool) if{ 1 } els{ 0 }",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "ALT ARM LED",
+            "Pin": "ALT ARM LED",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ALT ARM LED",
+          "GUID": "1a6f2e51-2869-4ca2-858e-c3a7ceb7f897",
+          "Active": true,
+          "Name": "ALT ARM LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "VarType": 0
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "9d693000-e49c-41c9-85b2-eae0a2d92bef",
+          "Active": false,
+          "Name": "7SEG BRIGHTNESS",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF NAV 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
+          "Active": false,
+          "Name": "7SEG BRIGHTNESS",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "4",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "ALT SEL ENC BTN"
+          },
+          "GUID": "57a90fd0-a38b-43b2-9bad-d7703181884e",
+          "Active": false,
+          "Name": "ALT SEL BTN UNUSE",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
+          }
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(L:MCP_Alt_sel_knob) -- (>L:MCP_Alt_sel_knob)",
+              "PresetId": "ed213a73-34d7-40b3-a2f1-ecec6f9daf5f",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(L:MCP_Alt_sel_knob) ++ (>L:MCP_Alt_sel_knob)",
+              "PresetId": "6937c70a-d75b-4b2d-8ef5-aa1bd3730994",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "ALT SEL ENC"
+          },
+          "GUID": "b49d70dc-3d36-4a24-a25e-6167571418dc",
+          "Active": true,
+          "Name": "ALT SEL ENC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:MCP_ALT_arm)",
+              "PresetId": "9fcaba22-7e36-4803-b1bf-a66b6f13d931",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "ALT ARM BTN"
+          },
+          "GUID": "40e9224f-72ed-4110-8d2b-bd76886c4697",
+          "Active": true,
+          "Name": "ALT ARM BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Altitude",
+            "Serial": "SN-BG4-F0E"
+          }
+        }
+      ]
+    },
+    {
+      "Label": "📻 Radio",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "0",
+              "Value": "(L:L_VHFNAV_Alert_il)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "ALERT LED",
+            "Pin": "ALERT LED",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ALERT LED",
+          "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
+          "Active": true,
+          "Name": "VHF LED ALERT",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF NAV 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              "NAV ACT: ###.###",
+              "NAV STB: !!!.!!!"
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
+          "Active": true,
+          "Name": "VHF LCD [NAV]",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "27bc3754-81e3-4cb7-8013-57a068882baf",
+              "Placeholder": "!",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              ""
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
+          "Active": true,
+          "Name": "VHF LCD [NAV] OFF",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF COM 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              "COM ACT: ###.###",
+              "COM STB: !!!.!!!"
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
+          "Active": true,
+          "Name": "VHF LCD [COM]",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "d5978e55-5064-41eb-b20d-c683236abade",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
+              "Placeholder": "!",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF COM 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              ""
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
+          "Active": true,
+          "Name": "VHF LCD [COM] OFF",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
           "Source": {
             "SimConnectValue": {
               "UUID": "-",
@@ -1410,40 +2078,6 @@
         {
           "Source": {
             "SimConnectValue": {
-              "VarType": 0
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "9d693000-e49c-41c9-85b2-eae0a2d92bef",
-          "Active": false,
-          "Name": "7SEG BRIGHTNESS",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
               "UUID": "-",
               "Value": "(L:L_VHFNAV_Knob_on)",
               "VarType": 2
@@ -1669,42 +2303,6 @@
                 "Type": "Transformation",
                 "Expression": "$",
                 "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF NAV 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
-          "Active": false,
-          "Name": "7SEG BRIGHTNESS",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "4",
-                "Active": true
               },
               {
                 "Type": "Comparison",
@@ -2084,583 +2682,6 @@
               "Active": true
             }
           ]
-        },
-        {
-          "button": {
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "ALT SEL ENC BTN"
-          },
-          "GUID": "57a90fd0-a38b-43b2-9bad-d7703181884e",
-          "Active": false,
-          "Name": "ALT SEL BTN UNUSE",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Altitude",
-            "Serial": "SN-BG4-F0E"
-          }
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:MCP_Alt_sel_knob) -- (>L:MCP_Alt_sel_knob)",
-              "PresetId": "ed213a73-34d7-40b3-a2f1-ecec6f9daf5f",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:MCP_Alt_sel_knob) ++ (>L:MCP_Alt_sel_knob)",
-              "PresetId": "6937c70a-d75b-4b2d-8ef5-aa1bd3730994",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "ALT SEL ENC"
-          },
-          "GUID": "b49d70dc-3d36-4a24-a25e-6167571418dc",
-          "Active": true,
-          "Name": "ALT SEL ENC",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Altitude",
-            "Serial": "SN-BG4-F0E"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_ALT_arm)",
-              "PresetId": "9fcaba22-7e36-4803-b1bf-a66b6f13d931",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "ALT ARM BTN"
-          },
-          "GUID": "40e9224f-72ed-4110-8d2b-bd76886c4697",
-          "Active": true,
-          "Name": "ALT ARM BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Altitude",
-            "Serial": "SN-BG4-F0E"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_GSL)",
-              "PresetId": "ed0d20f7-a7fc-4419-bc3f-2a4c17ae6b4d",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "GSL BTN"
-          },
-          "GUID": "50d213ee-9a61-4dec-a202-7b8dbf125559",
-          "Active": true,
-          "Name": "GSL BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_ALT)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "ALT BTN"
-          },
-          "GUID": "551da61b-ca8c-4710-bb14-e30c56759a15",
-          "Active": true,
-          "Name": "ALT BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_VS)",
-              "PresetId": "a5936429-32a8-430d-95eb-3e18e90b55d1",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "VS BTN"
-          },
-          "GUID": "d379b493-2b13-4d02-a41f-ff08ace65619",
-          "Active": true,
-          "Name": "VS BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_MACH)",
-              "PresetId": "dfeaffa7-de8f-492b-86be-9858e1567358",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "MACH BTN"
-          },
-          "GUID": "fe02cf9d-2810-4576-953d-a0e4a5d0c03e",
-          "Active": true,
-          "Name": "MACH BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_VNAV)",
-              "PresetId": "4f107c62-585a-41ac-8d21-f56e62e9bd9a",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "V NAV BTN"
-          },
-          "GUID": "5d07411c-0525-4a01-ad5f-20d4d1823fa4",
-          "Active": true,
-          "Name": "V NAV BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_IAS)",
-              "PresetId": "e26021f4-a69f-46a0-a8d0-3a47055e470a",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "IAS BTN"
-          },
-          "GUID": "2cb498f9-824a-4389-aa7a-0426c2268f69",
-          "Active": true,
-          "Name": "IAS BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_VL)",
-              "PresetId": "d09fb2c4-7af8-4b9a-8e01-003b15c250e0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "V/L BTN"
-          },
-          "GUID": "1336a82f-be15-457c-9909-0859758c8f43",
-          "Active": true,
-          "Name": "V/L BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_BLOC)",
-              "PresetId": "faa6bd1e-715d-4606-ac7d-c7d8e5d23861",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "B LOC BTN"
-          },
-          "GUID": "91edd146-aa1a-438c-b9d9-e1a387dd3ea2",
-          "Active": true,
-          "Name": "B LOC BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_TURB)",
-              "PresetId": "a1fed136-cfdd-4d63-b2be-1b72695e07ae",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRelease": {
-              "Type": "RetriggerInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "TURB BTN"
-          },
-          "GUID": "743c500f-7665-4623-9bf0-106d37e4750d",
-          "Active": true,
-          "Name": "TURB BTN (SYNC)",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_LNAV)",
-              "PresetId": "bd964c25-e45c-488c-86f1-75ded1545a99",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "L NAV BTN"
-          },
-          "GUID": "4010fb94-687f-4968-a2c1-a461300f07a9",
-          "Active": true,
-          "Name": "L NAV BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_Mode_HDG)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "HDG BTN"
-          },
-          "GUID": "964e0b5e-cfed-4289-a409-33d3096298c0",
-          "Active": true,
-          "Name": "HDG BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "(>K:AP_MASTER)",
-              "PresetId": "b17146c8-2db3-4239-b797-e7bc11d557da",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "AP BTN"
-          },
-          "GUID": "4fb7135b-debb-4771-954d-d8f55bcba7c7",
-          "Active": true,
-          "Name": "AP BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Autopilot",
-            "Serial": "SN-D8F-39D"
-          }
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:MCP_HDG_sel) -- (>L:MCP_HDG_sel)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onLeftFast": {
-              "Command": "(L:MCP_HDG_sel) 10 - (>L:MCP_HDG_sel)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:MCP_HDG_sel) ++ (>L:MCP_HDG_sel)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRightFast": {
-              "Command": "(L:MCP_HDG_sel) 10 + (>L:MCP_HDG_sel)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "HDG ENC"
-          },
-          "GUID": "1beede9f-037b-4068-8517-528262b89026",
-          "Active": true,
-          "Name": "HDG ENC",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "button": {
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "HDG BTN"
-          },
-          "GUID": "175628c4-6dc2-45e3-b56b-c596fae70a74",
-          "Active": false,
-          "Name": "HDG ENC BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "0 (>L:MCP_NAV_split)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "NAV1 SELECT"
-          },
-          "GUID": "3467273c-5e09-44c5-a692-6fe61c499a1d",
-          "Active": true,
-          "Name": "NAV SEL NAV1",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:MCP_NAV_split)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "NAV SPLIT SELECT"
-          },
-          "GUID": "422215a4-a303-4d1c-ba60-ca9c6aa17d8c",
-          "Active": true,
-          "Name": "NAV SEL SPLIT",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "2 (>L:MCP_NAV_split)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "NAV2 SELECT"
-          },
-          "GUID": "eb376968-fa2f-4c67-b997-f1b63c64a15c",
-          "Active": true,
-          "Name": "NAV SEL NAV2",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:MCP_NAV1_sel, number) -- (>L:MCP_NAV1_sel)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:MCP_NAV1_sel, number) ++ (>L:MCP_NAV1_sel)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "NAV1 ENC"
-          },
-          "GUID": "ef1fdc8c-8986-4309-bd91-d1681deadf78",
-          "Active": true,
-          "Name": "NAV1 CRS ENC",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "button": {
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "NAV1 BTN"
-          },
-          "GUID": "2e2e2053-6d03-4f24-aa36-c2da838a3c2d",
-          "Active": false,
-          "Name": "NAV1 CRS BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "button": {
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "NAV2 BTN"
-          },
-          "GUID": "b31d1804-8090-4a75-a8c9-c41986fe303d",
-          "Active": false,
-          "Name": "NAV2 CRS BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:MCP_NAV2_sel, number) 1 - (>L:MCP_NAV2_sel)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:MCP_NAV2_sel, number) 1 + (>L:MCP_NAV2_sel)",
-              "PresetId": "-",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "NAV2  ENC"
-          },
-          "GUID": "0a039472-becd-446e-b4c3-6df82a163331",
-          "Active": true,
-          "Name": "NAV2 CRS ENC",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Heading",
-            "Serial": "SN-51F-31B"
-          }
         },
         {
           "button": {
