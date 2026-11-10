@@ -2,6 +2,1267 @@
   "Name": "rj",
   "ConfigFiles": [
     {
+      "Label": "📻 Radio",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "0",
+              "Value": "(L:L_VHFNAV_Alert_il)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "ALERT LED",
+            "Pin": "ALERT LED",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ALERT LED",
+          "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
+          "Active": true,
+          "Name": "NAV ALERT LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF NAV 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              "NAV ACT: ###.###",
+              "NAV STB: !!!.!!!"
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
+          "Active": true,
+          "Name": "NAV MODE LCD",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "27bc3754-81e3-4cb7-8013-57a068882baf",
+              "Placeholder": "!",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              ""
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
+          "Active": true,
+          "Name": "NAV MODE LCD BLANK",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF COM 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              "COM ACT: ###.###",
+              "COM STB: !!!.!!!"
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
+          "Active": true,
+          "Name": "COM MODE LCD",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "d5978e55-5064-41eb-b20d-c683236abade",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
+              "Placeholder": "!",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "VHF COM 2ND",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "LcdDisplay",
+            "Address": "LcdDisplay",
+            "Lines": [
+              ""
+            ],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LcdDisplay",
+          "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
+          "Active": true,
+          "Name": "COM MODE LCD BLANK",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "-",
+              "Value": "(L:L_VHFNAV_Hold_il)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "HOLD LED",
+            "Pin": "HOLD LED",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "HOLD LED",
+          "GUID": "f1eff4b4-9c37-4569-8c61-7d83d034a8d6",
+          "Active": true,
+          "Name": "NAV HOLD LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "PANEL MODE",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+          "Active": true,
+          "Name": "[PANEL MODE]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "37a19dbf-bfc5-4193-ac3e-591772069e42",
+              "Value": " (A:NAV ACTIVE FREQUENCY:1,KHz)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
+          "Active": true,
+          "Name": "[NAV ACT FREQ]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "73a2f48d-d613-4b7b-b30d-8065bc150f98",
+              "Value": "(A:NAV STANDBY FREQUENCY:1,KHz)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "27bc3754-81e3-4cb7-8013-57a068882baf",
+          "Active": true,
+          "Name": "[NAV STB FREQ]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "b5a95362-411e-422d-9e6e-598b8b0bdcdf",
+              "Value": "(A:COM ACTIVE FREQUENCY:1, KHz) near",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "d5978e55-5064-41eb-b20d-c683236abade",
+          "Active": true,
+          "Name": "[COM ACT FREQ]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "b0d721be-f687-4250-81a6-0bb2a437f96c",
+              "Value": "(A:COM STANDBY FREQUENCY:1,KHz)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
+          "Active": true,
+          "Name": "[COM STB FREQ]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "-",
+              "Value": "(L:L_VHFNAV_Knob_on)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "dd36708b-d62a-4510-b2a9-98f132902e0b",
+          "Active": true,
+          "Name": "[NAV PWR]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "0",
+              "Value": "(L:PED_FWD_L_VHF_Mode)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "DeviceType": "",
+          "GUID": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
+          "Active": true,
+          "Name": "[COM PWR]",
+          "Type": "OutputConfigItem",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "0",
+              "Value": "(L:L_COAMING_MWS_Red_il)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "MWS RED LED",
+            "Pin": "MWS RED LED",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "MWS RED LED",
+          "GUID": "d8105d69-5898-40f7-b74b-91a4980cc2b0",
+          "Active": true,
+          "Name": "MWS RED LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "SimConnectValue": {
+              "UUID": "0",
+              "Value": "(L:L_COAMING_MWS_Amber_il)",
+              "VarType": 2
+            },
+            "Type": "SimConnectSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0
+          },
+          "Device": {
+            "Name": "MWS AMBER LED",
+            "Pin": "MWS AMBER LED",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "MWS AMBER LED",
+          "GUID": "91d8e839-8c6a-4675-b802-188a1518a208",
+          "Active": true,
+          "Name": "MWS AMBER LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$",
+                "Active": false
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "",
+                "Value": "",
+                "IfValue": "",
+                "ElseValue": "",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "(>K:NAV1_RADIO_SWAP)",
+              "PresetId": "72e5dd2a-4e9d-4d61-940a-e523202f8dd0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:15"
+          },
+          "GUID": "64e3085b-016b-4b6f-96cb-1a4caf395da5",
+          "Active": true,
+          "Name": "NAV MODE SWAP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "(>K:COM_STBY_RADIO_SWAP)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:15"
+          },
+          "GUID": "b54abc14-f575-4039-8707-7c4fead47cb6",
+          "Active": true,
+          "Name": "COM MODE SWAP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "(L:L_VHFNAV_Knob_on) ! (>L:L_VHFNAV_Knob_on) ",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:14"
+          },
+          "GUID": "88e54ae2-5a67-4c32-935a-d697e2744743",
+          "Active": true,
+          "Name": "NAV MODE KNOB PUSH (PWR)",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "(L:PED_FWD_L_VHF_Mode) ! (>L:PED_FWD_L_VHF_Mode)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:14"
+          },
+          "GUID": "ece1b313-2d58-4c49-8aa6-420be5c66c9b",
+          "Active": true,
+          "Name": "COM MODE KNOB PUSH (PWR)",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(>K:NAV1_RADIO_FRACT_INC)",
+              "PresetId": "91d424e5-4d6a-48a0-a435-153331c604b3",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(>K:NAV1_RADIO_FRACT_DEC)",
+              "PresetId": "f92f319c-75e2-471e-845a-764540c65040",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "INNER ENC"
+          },
+          "GUID": "88ded3c6-2865-4fc1-ad26-364dd5ac1288",
+          "Active": true,
+          "Name": "NAV MODE INNER KNOB",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(>K:COM_RADIO_FRACT_INC)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(>K:COM_RADIO_FRACT_DEC)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "INNER ENC"
+          },
+          "GUID": "3f9bd397-07cf-47a3-b2dd-b487757fcebb",
+          "Active": true,
+          "Name": "COM MODE INNER KNOB",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(>K:COM_RADIO_WHOLE_DEC)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(>K:COM_RADIO_WHOLE_INC)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "OUTER ENC"
+          },
+          "GUID": "fdd193c7-bbf7-4d0d-bf8b-5231c0156d2e",
+          "Active": true,
+          "Name": "COM MODE OUTER KNOB",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "encoder": {
+            "onLeft": {
+              "Command": "(>K:NAV1_RADIO_WHOLE_DEC)",
+              "PresetId": "bcb45f55-c67a-44b9-a951-096e450ccec7",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRight": {
+              "Command": "(>K:NAV1_RADIO_WHOLE_INC)",
+              "PresetId": "1ae481bc-bea6-4f58-a683-01c9d0c38e32",
+              "Type": "MSFS2020CustomInputAction"
+            }
+          },
+          "Device": {
+            "Type": "Encoder",
+            "Name": "OUTER ENC"
+          },
+          "GUID": "56052c5a-8c09-4dc3-8571-f63500283e78",
+          "Active": true,
+          "Name": "NAV MODE OUTER KNOB",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "2 (>L:L_VHFNAV_mode)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:12"
+          },
+          "GUID": "06366c86-70c5-4293-a8e9-df2d515adb74",
+          "Active": true,
+          "Name": "NAV FUNC ON",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "4 (>L:L_VHFNAV_mode)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:8"
+          },
+          "GUID": "4de0d617-3177-4ec3-b6a4-f0afd052cd6b",
+          "Active": true,
+          "Name": "NAV FUNC ORIDE",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "0 (>L:L_VHFNAV_mode)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:11"
+          },
+          "GUID": "592ce5f7-d874-43f9-911d-ae9d2855e9df",
+          "Active": true,
+          "Name": "NAV FUNC OFF",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:L_VHFNAV_mode)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:9"
+          },
+          "GUID": "53a238d5-638f-4c9b-a23b-7fffa7ebfe5e",
+          "Active": true,
+          "Name": "NAV FUNC STBY",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "3 (>L:L_VHFNAV_mode)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:10"
+          },
+          "GUID": "83475880-b126-4047-8592-3e5a35a84317",
+          "Active": true,
+          "Name": "NAV FUNC HOLD",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Variable": {
+                "TYPE": "number",
+                "Name": "PANEL MODE",
+                "Expression": "0"
+              },
+              "Type": "VariableInputAction"
+            },
+            "onRelease": {
+              "Variable": {
+                "TYPE": "number",
+                "Name": "PANEL MODE",
+                "Expression": "1"
+              },
+              "Type": "VariableInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:13"
+          },
+          "GUID": "20a2a8b5-37de-42a7-bae0-ea610de40d7c",
+          "Active": true,
+          "Name": "PANEL MODE SW (NAV/COM)",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "0 (>L:MCP_FD_L_switch)",
+              "PresetId": "",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "onRelease": {
+              "Command": "1 (>L:MCP_FD_L_switch)",
+              "PresetId": "",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:5"
+          },
+          "GUID": "cb020277-70f2-4d57-b4bb-2bb0a1af63bd",
+          "Active": true,
+          "Name": "FD BARS",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:L_COAMING_MWS_Red)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:7"
+          },
+          "GUID": "4b4e7158-85bc-44a8-8aca-ba62b3b08c70",
+          "Active": true,
+          "Name": "MWS RED BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Command": "1 (>L:L_COAMING_MWS_Amber)",
+              "PresetId": "0",
+              "Type": "MSFS2020CustomInputAction"
+            },
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "4067 Multiplexer:6"
+          },
+          "GUID": "4099ed0e-c82a-4971-a735-a870cee11e42",
+          "Active": true,
+          "Name": "MWS AMBER BTN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "146 Radio",
+            "Serial": "SN-G7D-DB2"
+          }
+        }
+      ]
+    },
+    {
       "Label": "🧑‍✈️ Autopilot",
       "ReferenceOnly": false,
       "EmbedContent": true,
@@ -1325,76 +2586,6 @@
           }
         },
         {
-          "Source": {
-            "SimConnectValue": {
-              "VarType": 0
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "9d693000-e49c-41c9-85b2-eae0a2d92bef",
-          "Active": false,
-          "Name": "7SEG BRIGHTNESS",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF NAV 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
-          "Active": false,
-          "Name": "7SEG BRIGHTNESS",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "4",
-                "Active": true
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
           "button": {
             "LongReleaseDelay": 350,
             "HoldDelay": 350,
@@ -1456,1516 +2647,6 @@
           "Controller": {
             "Name": "146 Altitude",
             "Serial": "SN-BG4-F0E"
-          }
-        }
-      ]
-    },
-    {
-      "Label": "📻 Radio",
-      "ReferenceOnly": false,
-      "EmbedContent": true,
-      "ConfigItems": [
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "0",
-              "Value": "(L:L_VHFNAV_Alert_il)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "ALERT LED",
-            "Pin": "ALERT LED",
-            "Brightness": 255,
-            "PwmMode": false,
-            "Type": "Output"
-          },
-          "DeviceType": "Output",
-          "DeviceName": "ALERT LED",
-          "GUID": "72458009-0189-4332-85c0-18adc37b9e08",
-          "Active": true,
-          "Name": "NAV ALERT LED",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF NAV 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              "NAV ACT: ###.###",
-              "NAV STB: !!!.!!!"
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "05769264-e672-46f7-a12c-0fa3cbe61fd8",
-          "Active": true,
-          "Name": "NAV MODE LCD",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          },
-          "ConfigRefs": [
-            {
-              "Active": true,
-              "Ref": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
-              "Placeholder": "#",
-              "TestValue": "1"
-            },
-            {
-              "Active": true,
-              "Ref": "27bc3754-81e3-4cb7-8013-57a068882baf",
-              "Placeholder": "!",
-              "TestValue": "1"
-            }
-          ]
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              ""
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "e99238e7-94f7-4d8a-9cea-c4c1c8025ec4",
-          "Active": true,
-          "Name": "NAV MODE LCD BLANK",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "dd36708b-d62a-4510-b2a9-98f132902e0b",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF COM 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              "COM ACT: ###.###",
-              "COM STB: !!!.!!!"
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "76b61bcb-20cb-4b0e-9e9e-e853c5aec76f",
-          "Active": true,
-          "Name": "COM MODE LCD",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          },
-          "ConfigRefs": [
-            {
-              "Active": true,
-              "Ref": "d5978e55-5064-41eb-b20d-c683236abade",
-              "Placeholder": "#",
-              "TestValue": "1"
-            },
-            {
-              "Active": true,
-              "Ref": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
-              "Placeholder": "!",
-              "TestValue": "1"
-            }
-          ]
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF COM 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "LcdDisplay",
-            "Address": "LcdDisplay",
-            "Lines": [
-              ""
-            ],
-            "Type": "LcdDisplay"
-          },
-          "DeviceType": "LcdDisplay",
-          "DeviceName": "LcdDisplay",
-          "GUID": "34be2c2f-934b-404a-8569-b78bcf27e54c",
-          "Active": true,
-          "Name": "COM MODE LCD BLANK",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ],
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "-",
-              "Value": "(L:L_VHFNAV_Hold_il)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "HOLD LED",
-            "Pin": "HOLD LED",
-            "Brightness": 255,
-            "PwmMode": false,
-            "Type": "Output"
-          },
-          "DeviceType": "Output",
-          "DeviceName": "HOLD LED",
-          "GUID": "f1eff4b4-9c37-4569-8c61-7d83d034a8d6",
-          "Active": true,
-          "Name": "NAV HOLD LED",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "=",
-                "Value": "",
-                "IfValue": "1",
-                "ElseValue": "0",
-                "Active": true
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "PANEL MODE",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-          "Active": true,
-          "Name": "[PANEL MODE]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "37a19dbf-bfc5-4193-ac3e-591772069e42",
-              "Value": " (A:NAV ACTIVE FREQUENCY:1,KHz)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "a5a8ccd4-0e06-4db8-a2eb-e83d28fb6bb3",
-          "Active": true,
-          "Name": "[NAV ACT FREQ]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "73a2f48d-d613-4b7b-b30d-8065bc150f98",
-              "Value": "(A:NAV STANDBY FREQUENCY:1,KHz)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "27bc3754-81e3-4cb7-8013-57a068882baf",
-          "Active": true,
-          "Name": "[NAV STB FREQ]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "b5a95362-411e-422d-9e6e-598b8b0bdcdf",
-              "Value": "(A:COM ACTIVE FREQUENCY:1, KHz) near",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "d5978e55-5064-41eb-b20d-c683236abade",
-          "Active": true,
-          "Name": "[COM ACT FREQ]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "0dd2e7e3-46b0-46da-863f-2fac9097358b",
-              "Value": "(A:COM ACTIVE FREQUENCY:1, KHz) near",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "52029443-5dc2-451a-ab58-9904fe0f341b",
-          "Active": false,
-          "Name": "[VHF COM ACT] Copy",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "b0d721be-f687-4250-81a6-0bb2a437f96c",
-              "Value": "(A:COM STANDBY FREQUENCY:1,KHz)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "0dfe1dca-4544-4bd6-a7be-3159ed13f9e8",
-          "Active": true,
-          "Name": "[COM STB FREQ]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "-",
-              "Value": "(L:L_VHFNAV_Knob_on)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "dd36708b-d62a-4510-b2a9-98f132902e0b",
-          "Active": true,
-          "Name": "[NAV PWR]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "0",
-              "Value": "(L:PED_FWD_L_VHF_Mode)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
-          "Active": true,
-          "Name": "[COM PWR]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "-",
-              "Value": "(L:L_VHFNAV_mode)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "2b7d10f2-91c0-4b2b-9c08-02545538b088",
-          "Active": true,
-          "Name": "[NAV FUNC]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "-",
-              "Value": "(L:PED_FWD_L_VHF_Tfr)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-          "Active": true,
-          "Name": "[COM XFR]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "0",
-              "Value": "(L:L_COAMING_MWS_Red_il)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "MWS RED LED",
-            "Pin": "MWS RED LED",
-            "Brightness": 255,
-            "PwmMode": false,
-            "Type": "Output"
-          },
-          "DeviceType": "Output",
-          "DeviceName": "MWS RED LED",
-          "GUID": "d8105d69-5898-40f7-b74b-91a4980cc2b0",
-          "Active": true,
-          "Name": "MWS RED LED",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "0",
-              "Value": "(L:L_COAMING_MWS_Amber_il)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "Device": {
-            "Name": "MWS AMBER LED",
-            "Pin": "MWS AMBER LED",
-            "Brightness": 255,
-            "PwmMode": false,
-            "Type": "Output"
-          },
-          "DeviceType": "Output",
-          "DeviceName": "MWS AMBER LED",
-          "GUID": "91d8e839-8c6a-4675-b802-188a1518a208",
-          "Active": true,
-          "Name": "MWS AMBER LED",
-          "Type": "OutputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "(>K:NAV1_RADIO_SWAP)",
-              "PresetId": "72e5dd2a-4e9d-4d61-940a-e523202f8dd0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:15"
-          },
-          "GUID": "64e3085b-016b-4b6f-96cb-1a4caf395da5",
-          "Active": true,
-          "Name": "NAV MODE SWAP",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "(>K:COM_STBY_RADIO_SWAP)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:15"
-          },
-          "GUID": "b54abc14-f575-4039-8707-7c4fead47cb6",
-          "Active": true,
-          "Name": "COM MODE SWAP",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "(L:L_VHFNAV_Knob_on) ! (>L:L_VHFNAV_Knob_on) ",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:14"
-          },
-          "GUID": "88e54ae2-5a67-4c32-935a-d697e2744743",
-          "Active": true,
-          "Name": "NAV MODE KNOB PUSH (PWR)",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "(L:PED_FWD_L_VHF_Mode) ! (>L:PED_FWD_L_VHF_Mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:14"
-          },
-          "GUID": "ece1b313-2d58-4c49-8aa6-420be5c66c9b",
-          "Active": true,
-          "Name": "COM MODE KNOB PUSH (PWR)",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(>K:NAV1_RADIO_FRACT_INC)",
-              "PresetId": "91d424e5-4d6a-48a0-a435-153331c604b3",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(>K:NAV1_RADIO_FRACT_DEC)",
-              "PresetId": "f92f319c-75e2-471e-845a-764540c65040",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "INNER ENC"
-          },
-          "GUID": "88ded3c6-2865-4fc1-ad26-364dd5ac1288",
-          "Active": true,
-          "Name": "NAV MODE INNER KNOB",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(>K:COM_RADIO_FRACT_INC)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(>K:COM_RADIO_FRACT_DEC)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "INNER ENC"
-          },
-          "GUID": "3f9bd397-07cf-47a3-b2dd-b487757fcebb",
-          "Active": true,
-          "Name": "COM MODE INNER KNOB",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(>K:COM_RADIO_WHOLE_DEC)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(>K:COM_RADIO_WHOLE_INC)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "OUTER ENC"
-          },
-          "GUID": "fdd193c7-bbf7-4d0d-bf8b-5231c0156d2e",
-          "Active": true,
-          "Name": "COM MODE OUTER KNOB",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Act_inner) ++ (>L:PED_FWD_L_VHF_Act_inner)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Act_inner) -- (>L:PED_FWD_L_VHF_Act_inner)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "INNER ENC"
-          },
-          "GUID": "779f1e4e-9135-46ba-962a-36e8e9f3b668",
-          "Active": false,
-          "Name": "VHF ENC IN [COM] COM2 ACT",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Act_outer) -- (>L:PED_FWD_L_VHF_Act_outer)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Act_outer) ++ (>L:PED_FWD_L_VHF_Act_outer)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "OUTER ENC"
-          },
-          "GUID": "436edf19-d068-40e4-86f1-0b39b782c69a",
-          "Active": false,
-          "Name": "VHF ENC OUT [COM] COM2 ACT",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(>K:NAV1_RADIO_WHOLE_DEC)",
-              "PresetId": "bcb45f55-c67a-44b9-a951-096e450ccec7",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(>K:NAV1_RADIO_WHOLE_INC)",
-              "PresetId": "1ae481bc-bea6-4f58-a683-01c9d0c38e32",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "OUTER ENC"
-          },
-          "GUID": "56052c5a-8c09-4dc3-8571-f63500283e78",
-          "Active": true,
-          "Name": "NAV MODE OUTER KNOB",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "0",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "2 (>L:L_VHFNAV_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:12"
-          },
-          "GUID": "06366c86-70c5-4293-a8e9-df2d515adb74",
-          "Active": true,
-          "Name": "NAV FUNC ON",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "4 (>L:L_VHFNAV_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:8"
-          },
-          "GUID": "4de0d617-3177-4ec3-b6a4-f0afd052cd6b",
-          "Active": true,
-          "Name": "NAV FUNC ORIDE",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "0 (>L:L_VHFNAV_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:11"
-          },
-          "GUID": "592ce5f7-d874-43f9-911d-ae9d2855e9df",
-          "Active": true,
-          "Name": "NAV FUNC OFF",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:L_VHFNAV_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:9"
-          },
-          "GUID": "53a238d5-638f-4c9b-a23b-7fffa7ebfe5e",
-          "Active": true,
-          "Name": "NAV FUNC STBY",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "3 (>L:L_VHFNAV_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:10"
-          },
-          "GUID": "83475880-b126-4047-8592-3e5a35a84317",
-          "Active": true,
-          "Name": "NAV FUNC HOLD",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Variable": {
-                "TYPE": "number",
-                "Name": "PANEL MODE",
-                "Expression": "0"
-              },
-              "Type": "VariableInputAction"
-            },
-            "onRelease": {
-              "Variable": {
-                "TYPE": "number",
-                "Name": "PANEL MODE",
-                "Expression": "1"
-              },
-              "Type": "VariableInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:13"
-          },
-          "GUID": "20a2a8b5-37de-42a7-bae0-ea610de40d7c",
-          "Active": true,
-          "Name": "PANEL MODE SW (NAV/COM)",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "GUID": "156ed8a5-75c9-4038-8ead-10b0c73c8132",
-          "Active": false,
-          "Name": "[VHF FRQ 1 NAV]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "GUID": "08f04093-3026-4320-b423-eec9b0640d5b",
-          "Active": false,
-          "Name": "[VHF FRQ 2 NAV]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "GUID": "01191d76-6484-4dcd-820e-f357200395b0",
-          "Active": false,
-          "Name": "[VHF FRQ 3 COM]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "GUID": "3f4e6a26-b202-4295-83f8-c267e55ffce5",
-          "Active": false,
-          "Name": "[VHF FRQ 4 COM]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "0 (>L:MCP_FD_L_switch)",
-              "PresetId": "",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRelease": {
-              "Command": "1 (>L:MCP_FD_L_switch)",
-              "PresetId": "",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:5"
-          },
-          "GUID": "cb020277-70f2-4d57-b4bb-2bb0a1af63bd",
-          "Active": true,
-          "Name": "FD BARS",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "0 (>L:L_MISC_HSI_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRelease": {
-              "Command": "1 (>L:L_MISC_HSI_mode)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:5"
-          },
-          "GUID": "d0ecf1f0-aa0e-447c-8127-5d6930301ab3",
-          "Active": false,
-          "Name": "HSI Mode",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:L_COAMING_MWS_Red)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:7"
-          },
-          "GUID": "4b4e7158-85bc-44a8-8aca-ba62b3b08c70",
-          "Active": true,
-          "Name": "MWS RED BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          }
-        },
-        {
-          "button": {
-            "onPress": {
-              "Command": "1 (>L:L_COAMING_MWS_Amber)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "LongReleaseDelay": 350,
-            "HoldDelay": 350,
-            "RepeatDelay": 0
-          },
-          "Device": {
-            "Type": "Button",
-            "Name": "4067 Multiplexer:6"
-          },
-          "GUID": "4099ed0e-c82a-4971-a735-a870cee11e42",
-          "Active": true,
-          "Name": "MWS AMBER BTN",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
           }
         }
       ]

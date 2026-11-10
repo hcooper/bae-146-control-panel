@@ -1320,76 +1320,6 @@
           }
         },
         {
-          "Source": {
-            "SimConnectValue": {
-              "VarType": 0
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "9d693000-e49c-41c9-85b2-eae0a2d92bef",
-          "Active": false,
-          "Name": "7SEG BRIGHTNESS",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "MobiFlightVariable": {
-              "TYPE": "number",
-              "Name": "VHF NAV 2ND",
-              "Expression": "$"
-            },
-            "Type": "VariableSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "d5a51353-c246-425f-b4cc-57d490fcb0a8",
-          "Active": false,
-          "Name": "7SEG BRIGHTNESS",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "4",
-                "Active": true
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
           "button": {
             "LongReleaseDelay": 350,
             "HoldDelay": 350,
@@ -2006,42 +1936,6 @@
         {
           "Source": {
             "SimConnectValue": {
-              "UUID": "0dd2e7e3-46b0-46da-863f-2fac9097358b",
-              "Value": "(A:COM ACTIVE FREQUENCY:1, KHz) near",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "52029443-5dc2-451a-ab58-9904fe0f341b",
-          "Active": false,
-          "Name": "[VHF COM ACT] Copy",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
               "UUID": "b0d721be-f687-4250-81a6-0bb2a437f96c",
               "Value": "(A:COM STANDBY FREQUENCY:1,KHz)",
               "VarType": 2
@@ -2128,78 +2022,6 @@
           "GUID": "9a982b7e-2d58-4f49-8bb2-a7debac1cb77",
           "Active": true,
           "Name": "[COM PWR]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "-",
-              "Value": "(L:L_VHFNAV_mode)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "2b7d10f2-91c0-4b2b-9c08-02545538b088",
-          "Active": true,
-          "Name": "[NAV FUNC]",
-          "Type": "OutputConfigItem",
-          "Modifiers": {
-            "Items": [
-              {
-                "Type": "Transformation",
-                "Expression": "$",
-                "Active": false
-              },
-              {
-                "Type": "Comparison",
-                "Operand": "",
-                "Value": "",
-                "IfValue": "",
-                "ElseValue": "",
-                "Active": false
-              }
-            ]
-          }
-        },
-        {
-          "Source": {
-            "SimConnectValue": {
-              "UUID": "-",
-              "Value": "(L:PED_FWD_L_VHF_Tfr)",
-              "VarType": 2
-            },
-            "Type": "SimConnectSource"
-          },
-          "TestValue": {
-            "type": 1,
-            "Float64": 1.0
-          },
-          "DeviceType": "",
-          "GUID": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-          "Active": true,
-          "Name": "[COM XFR]",
           "Type": "OutputConfigItem",
           "Modifiers": {
             "Items": [
@@ -2562,94 +2384,6 @@
         {
           "encoder": {
             "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Act_inner) ++ (>L:PED_FWD_L_VHF_Act_inner)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Act_inner) -- (>L:PED_FWD_L_VHF_Act_inner)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "INNER ENC"
-          },
-          "GUID": "779f1e4e-9135-46ba-962a-36e8e9f3b668",
-          "Active": false,
-          "Name": "VHF ENC IN [COM] COM2 ACT",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
-              "Command": "(L:PED_FWD_L_VHF_Act_outer) -- (>L:PED_FWD_L_VHF_Act_outer)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            },
-            "onRight": {
-              "Command": "(L:PED_FWD_L_VHF_Act_outer) ++ (>L:PED_FWD_L_VHF_Act_outer)",
-              "PresetId": "0",
-              "Type": "MSFS2020CustomInputAction"
-            }
-          },
-          "Device": {
-            "Type": "Encoder",
-            "Name": "OUTER ENC"
-          },
-          "GUID": "436edf19-d068-40e4-86f1-0b39b782c69a",
-          "Active": false,
-          "Name": "VHF ENC OUT [COM] COM2 ACT",
-          "Type": "InputConfigItem",
-          "Controller": {
-            "Name": "146 Radio",
-            "Serial": "SN-G7D-DB2"
-          },
-          "Preconditions": [
-            {
-              "Type": "config",
-              "Ref": "d3f19076-fe7e-4e0f-aa55-83c585e34dfe",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            },
-            {
-              "Type": "config",
-              "Ref": "9f5b50e4-57bb-41f2-bdda-c3fe67c9d4ca",
-              "Operand": "=",
-              "Value": "1",
-              "Logic": "and",
-              "Active": true
-            }
-          ]
-        },
-        {
-          "encoder": {
-            "onLeft": {
               "Command": "(>K:NAV1_RADIO_WHOLE_DEC)",
               "PresetId": "bcb45f55-c67a-44b9-a951-096e450ccec7",
               "Type": "MSFS2020CustomInputAction"
@@ -2837,30 +2571,6 @@
             "Name": "146 Radio",
             "Serial": "SN-G7D-DB2"
           }
-        },
-        {
-          "GUID": "156ed8a5-75c9-4038-8ead-10b0c73c8132",
-          "Active": false,
-          "Name": "[VHF FRQ 1 NAV]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "GUID": "08f04093-3026-4320-b423-eec9b0640d5b",
-          "Active": false,
-          "Name": "[VHF FRQ 2 NAV]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "GUID": "01191d76-6484-4dcd-820e-f357200395b0",
-          "Active": false,
-          "Name": "[VHF FRQ 3 COM]",
-          "Type": "InputConfigItem"
-        },
-        {
-          "GUID": "3f4e6a26-b202-4295-83f8-c267e55ffce5",
-          "Active": false,
-          "Name": "[VHF FRQ 4 COM]",
-          "Type": "InputConfigItem"
         },
         {
           "button": {
